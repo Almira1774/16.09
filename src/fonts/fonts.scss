@@ -1,0 +1,21 @@
+font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Regular.woff') format('woff');
+    font-weight: normal; // Для Regular
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Lakes';
+    src:url('TTLakes-Medium.woff') format('woff');
+    font-weight: 500; // Для Medium
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Bold.woff') format('woff');
+    font-weight: bold; // Для Bold
+    font-style: normal;
+  }
+  

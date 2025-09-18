@@ -1,19 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
-mode: 'production',
+mode: 'development',
 entry: path.resolve(__dirname, 'src/index.js'),
 output: {
 path: path.resolve(__dirname, 'dist'),
 filename: '[name][contenthash].js',
-assetModuleFilename: '[name][ext]',
+assetModuleFilename: 'assets/[name][ext]',
 clean: true
-},
-performance:{
-hints: false,
-maxAssetSize: 512000,
-maxEntrypointSize: 512000
 },
 devServer: {
 port: 9000,
@@ -30,9 +26,26 @@ test: /\.scss$/,
 use: ['style-loader', 'css-loader', 'sass-loader'],
 },
 {
-test: /\.(png|svg|jpeg|jpg|gif)$/i,
-type: 'asset/resource'
-},
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+    
+  },
+  {
+    test: /\.svg$/,
+    type: 'asset/resource',
+    generator: {
+        filename: path.join('icons', '[name].[contenthash][ext]'),
+    }
+  },
+  {
+    test: /\.(woff2?|eot|ttf|otf)$/i,
+    type: 'asset/resource'
+  },
+  {
+    test: /\.js$/,
+    use: 'babel-loader',
+    exclude: /node_modules/,
+  }
 ],
 },
 plugins: [

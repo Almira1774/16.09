@@ -1,0 +1,44 @@
+$background-color:#F8F8F8;
+$header-color:#FFFFFF;
+$icon-color:#FF3E79;
+$border-color:#D9FFF5;
+$divider-color: #EAEAEA;
+
+
+$btn-order-width:119px;
+$btn-order-height:32px;
+$btn-order-radius:16px;
+
+$icon-width: 40px;
+$icon-height: 40px;
+$icon-border-radius: 50%;
+$icon-border-width: 0;
+
+$font-primary: 'TT Lakes', sans-serif;
+$font-small: 14px;
+$font-medium: 16px;
+$font-large: 24px;
+$font-xlarge: 28px;
+
+$font-black: #1B1C21;
+$font-gray:  #7E7E82;
+$font-white: #FFFFFF;
+
+@mixin h1 {
+    font-family:  $font-primary;
+    font-size: $font-xlarge;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    line-height: 40px;
+    color: $font-black;
+}
+
+$mobile-from: 320px;
+$mobile-to: 767px;
+$tablet-from: 768px;
+$tablet-to: 1119px;
+$desktop-from: 1120px;
+
+
+
+

@@ -1,3 +1,6 @@
 import './sass/main.scss'
-import nature from './assets/2025-09-11_18-00-02.png'
+import './fonts/fonts.scss'
+
+
+
 const hello = require('./js/hello')

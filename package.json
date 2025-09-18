@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,9 @@
     "webpack-cli": "^6.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "sass": "^1.92.1",
     "sass-loader": "^16.0.5",

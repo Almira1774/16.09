@@ -1,0 +1,318 @@
+@use './variables' as *;
+
+.header{
+    display: flex;    
+    margin-right: auto;
+    margin-left: auto;
+
+@media (min-width: $mobile-from) and (max-width: $mobile-to) {
+    & {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width:320px;
+    }
+}
+
+@media (min-width:$tablet-from) and (max-width:$tablet-to) {
+    & {
+        flex-wrap: wrap;
+        width: 768px;    
+    }
+}
+
+@media (min-width: $desktop-from) {
+   & {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 42px;
+        width: 1096px;
+        height: 48px;
+        background: $background-color;
+    }
+}
+}
+
+.header-buttons{    
+    display: flex;   
+    align-items: center;    
+    align-content: center;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+
+@media (min-width: 320px) and (max-width:767px) {
+    & {
+        justify-content: space-evenly;
+        column-gap: 16px;
+        display: flex;        
+        height: 88px;
+        background: $header-color;
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+    & {
+        justify-content: space-between;
+        column-gap: 24px;     
+        height: 88px;
+        background: $header-color;       
+    }
+}
+@media (min-width: 1120px) {
+    & {
+        column-gap: 33px;  
+        border: none;
+    }
+}
+}
+
+.header-buttons__button {
+    border-width: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $icon-color;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.header-buttons__button--burger {
+    margin-left: 16px;
+    background-image: url("../assets/iconBurger.svg");
+    background-size: 18px 16px;
+
+@media (min-width: 768px) and (max-width: 1119px) {
+    & {
+        margin-left: 24px;      
+}
+}
+@media screen and (min-width: 1120px) {
+    & {
+        display: none;        
+    }        
+    }
+    
+}
+
+
+.header-buttons__button--logo {
+    margin-right: auto;
+    border-width: 0;
+    width: 96.55px;
+    height: 50.81px;
+    background-image: url("../assets/iconLogo.svg");
+    background-color: $header-color;
+}
+
+.header-buttons__button--call{
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+       
+            display: none;        
+    }
+    @media (min-width: 768px) and (max-width: 1119px) {
+  
+        background-image: url("../assets/iconCall.svg");
+        background-size: 17.96px;
+    }
+    @media (min-width: 1120px) {
+  
+        display: none;        
+    
+   }
+}
+
+.header-buttons__button--chat {
+    background-image: url("../assets/iconChat.svg");
+    background-size: 20px;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        display: none;
+    }
+}
+
+
+.header-buttons__button--profile {
+    background-image: url("../assets/iconProfile.svg");
+    background-size: 20px 18px;
+}
+
+.header-buttons__button--repair {
+    background-image: url("../assets/iconRepair.svg");
+    background-size: 20px;
+}
+
+@media (min-width: 1120px) {
+    .header-buttons__button-label {
+        display: contents;
+        font: 500 16px/24px 'TTLakes';
+        letter-spacing: -0.2px;
+        min-width: 125px;
+    }
+
+}
+
+.header-buttons__button--status {
+    margin-right: 16px;
+    background-image: url("../assets/iconCheckStatus.svg");
+    background-size: 16px 20px;
+
+}
+@media (min-width: 320px) {
+    .header-buttons__button--status {
+        margin-right: 16px;
+
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1119px) {
+    .header-buttons__button--status {
+        margin-right: 24px;
+
+    }
+}
+
+@media (min-width: 1120px) {
+    .header-buttons__button--status {
+        display: flex;
+        background-image: url("../assets/iconCheckStatus.svg");
+        background-size: 16px 20px;
+        column-gap: 9px;
+        align-items: center;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .header-buttons__button--profile,
+    .header-buttons__button-label {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1119px) {
+    .header-buttons__button-label {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1120px) {
+
+    .header-buttons__button--burger,
+    .header-buttons__button--chat,
+    .header-buttons__button--profile,
+    .header-buttons__button--logo,
+    .header-buttons__button--call {
+        display: none;
+    }
+}
+
+.header-buttons__divider-1,
+.header-buttons__divider-2 {
+
+    background-color:$divider-color;
+    border-radius: 1px;
+    width: 2px;
+    height: 32px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .header-buttons__divider-2 {
+        display: none;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .header-buttons__divider-1,
+    .header-buttons__divider-2 {
+        display: none;
+    }
+}
+
+@media (min-width:1120px) {
+    .header-buttons__repair-container {
+        display: flex;
+        font: 500 16px/24px 'TTLakes';
+        letter-spacing: -0.2px;
+        margin-left: auto;
+        column-gap: 9px;
+        align-items: center;
+
+    }
+}
+
+@media (min-width:1120px) {
+    .header-buttons__status-container {
+        display: flex;
+        align-items: center;
+        font: 500 16px/24px 'TTLakes';
+        letter-spacing: -0.2px;
+        column-gap: 9px;
+        align-items: center;
+
+    }
+}
+.h1-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+      
+  @media (min-width: 320px) and (max-width: 767px) {
+    & {
+        
+        margin-top: 24px;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width: 1119px) {
+   & {
+        width: 281px;
+        margin-top: 24px;
+    }
+  }
+  
+  @media (min-width:1120px) {
+    & {
+        margin-right: auto;
+        width: 274px;
+  
+    }
+  }
+  }
+  .h1-container__img {
+    width: 4px;
+    height: 40px;
+    border-radius: 3px;
+    background-image: url("../assets/h1-container.svg");
+  }
+  
+  
+  .h1-container__text {
+   width: 100%;
+    height: 40px;
+    margin-top: 0%;
+    @include h1(); 
+  
+  @media (min-width:320px) and (max-width: 767px) {
+   & {   
+     
+        padding-left: 16px;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width: 1119px) {
+   & {
+        padding-left: 24px;
+    }
+  }
+  
+  @media (min-width:1120px) {
+    & {
+        padding-left: 33px;
+    }
+  }
+  }
+  

@@ -6,7 +6,32 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <h1>Первый проект на webpack</h1>
+    <header class="header">
+        <div class="header-buttons">
+            <button type="button" class="header-buttons__button header-buttons__button--burger"></button>
+            <div class="header-buttons__divider-1"></div>
+            <button type="button" class="header-buttons__button header-buttons__button--logo"></button>
+            <button type="button" class="header-buttons__button header-buttons__button--call"></button>
+            <button type="button" class="header-buttons__button header-buttons__button--chat"></button>
+            <button type="button" class="header-buttons__button header-buttons__button--profile"></button>
+            <div class="header-buttons__divider-2"></div>
+            <div class="header-buttons__repair-container">
+                <span class="header-buttons__button-label">Оставить заявку</span>
+                <button type="button" class="header-buttons__button header-buttons__button--repair"></button>
+            </div>
+            <div class="header-buttons__status-container">
+                <span class="header-buttons__button-label">Статус ремонта</span>
+                <button type="button" class="header-buttons__button header-buttons__button--status"></button>
+            </div>
+        </div>
+
+        <div class="h1-container">
+            <div class="h1-container__img"></div>
+            <h1 class="h1-container__text">Услуги и сервисы</h1>
+        </div>     
+        
+    </header>
+    
     
 </body>
 </html>

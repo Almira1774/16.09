@@ -1,4 +1,17 @@
+@use './variables' as *;
+@use './header' as *;
+
 $base-color: #333;
+html {
+    font-family: 'TT_Lakes';
+    box-sizing: border-box;
+  }
+  *,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 body {
- background-color: $base-color;
+ background-color: $background-color;
+ margin: 0%;
 }
