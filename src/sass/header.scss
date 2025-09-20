@@ -1,27 +1,23 @@
 @use './variables' as *;
 
-.header{
-    display: flex;    
+
+.header {
+    display: flex;
     margin-right: auto;
     margin-left: auto;
 
-@media (min-width: $mobile-from) and (max-width: $mobile-to) {
-    & {
+    @media screen and (min-width: $mobile-from) and (max-width: $mobile-to) {
         flex-direction: column;
         flex-wrap: wrap;
-        width:320px;
+        width: 320px;
     }
-}
 
-@media (min-width:$tablet-from) and (max-width:$tablet-to) {
-    & {
+    @media screen and (min-width:$tablet-from) and (max-width:$tablet-to) {
         flex-wrap: wrap;
-        width: 768px;    
+        width: 768px;
     }
-}
 
-@media (min-width: $desktop-from) {
-   & {
+    @media screen and (min-width: $desktop-from) {
         flex-direction: row-reverse;
         align-items: center;
         margin-top: 42px;
@@ -30,38 +26,34 @@
         background: $background-color;
     }
 }
-}
 
-.header-buttons{    
-    display: flex;   
-    align-items: center;    
+.header-buttons {
+    display: flex;
+    align-items: center;
     align-content: center;
     border-bottom: 1px solid $border-color;
     width: 100%;
+    @include fontButtons;
 
-@media (min-width: 320px) and (max-width:767px) {
-    & {
+    @media screen and (min-width: 320px) and (max-width:767px) {
         justify-content: space-evenly;
         column-gap: 16px;
-        display: flex;        
+        display: flex;
         height: 88px;
         background: $header-color;
     }
-}
-@media (min-width: 768px) and (max-width: 1119px) {
-    & {
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
         justify-content: space-between;
-        column-gap: 24px;     
+        column-gap: 24px;
         height: 88px;
-        background: $header-color;       
+        background: $header-color;
     }
-}
-@media (min-width: 1120px) {
-    & {
-        column-gap: 33px;  
+
+    @media screen and (min-width: 1120px) {
+        column-gap: 33px;
         border: none;
     }
-}
 }
 
 .header-buttons__button {
@@ -80,17 +72,13 @@
     background-image: url("../assets/iconBurger.svg");
     background-size: 18px 16px;
 
-@media (min-width: 768px) and (max-width: 1119px) {
-    & {
-        margin-left: 24px;      
-}
-}
-@media screen and (min-width: 1120px) {
-    & {
-        display: none;        
-    }        
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        margin-left: 24px;
     }
-    
+
+    @media screen and (min-width: 1120px) {
+        display: none;
+    }
 }
 
 
@@ -101,31 +89,38 @@
     height: 50.81px;
     background-image: url("../assets/iconLogo.svg");
     background-color: $header-color;
+
+    @media screen and (min-width:1120px) {
+        display: none;
+
+    }
 }
 
-.header-buttons__button--call{
+.header-buttons__button--call {
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
-       
-            display: none;        
+        display: none;
     }
-    @media (min-width: 768px) and (max-width: 1119px) {
-  
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
         background-image: url("../assets/iconCall.svg");
         background-size: 17.96px;
     }
-    @media (min-width: 1120px) {
-  
-        display: none;        
-    
-   }
+
+    @media screen and (min-width: 1120px) {
+        display: none;
+    }
 }
 
 .header-buttons__button--chat {
     background-image: url("../assets/iconChat.svg");
     background-size: 20px;
 
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width:1120px) {
         display: none;
     }
 }
@@ -134,6 +129,16 @@
 .header-buttons__button--profile {
     background-image: url("../assets/iconProfile.svg");
     background-size: 20px 18px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+
+    }
+
+    @media screen and (min-width: 1120px) {
+        display: none;
+
+    }
 }
 
 .header-buttons__button--repair {
@@ -141,14 +146,24 @@
     background-size: 20px;
 }
 
-@media (min-width: 1120px) {
-    .header-buttons__button-label {
-        display: contents;
-        font: 500 16px/24px 'TTLakes';
-        letter-spacing: -0.2px;
-        min-width: 125px;
+.header-buttons__button-label {
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1120px) {
+        .header-buttons__button-label {
+            display: contents;
+            font: 500 16px/24px 'TTLakes';
+            letter-spacing: -0.2px;
+            min-width: 125px;
+        }
+    }
 }
 
 .header-buttons__button--status {
@@ -156,62 +171,21 @@
     background-image: url("../assets/iconCheckStatus.svg");
     background-size: 16px 20px;
 
-}
-@media (min-width: 320px) {
-    .header-buttons__button--status {
-        margin-right: 16px;
-
-    }
-}
-
-@media (min-width: 767px) and (max-width: 1119px) {
-    .header-buttons__button--status {
+    @media screen and (min-width: 767px) and (max-width: 1119px) {
         margin-right: 24px;
-
     }
-}
 
-@media (min-width: 1120px) {
-    .header-buttons__button--status {
+    @media screen and (min-width: 1120px) {
         display: flex;
-        background-image: url("../assets/iconCheckStatus.svg");
-        background-size: 16px 20px;
         column-gap: 9px;
         align-items: center;
     }
 }
 
 
-@media (min-width: 320px) and (max-width: 767px) {
-
-    .header-buttons__button--profile,
-    .header-buttons__button-label {
-        display: none;
-    }
-}
-
-@media (min-width:768px) and (max-width: 1119px) {
-    .header-buttons__button-label {
-        display: none;
-    }
-
-}
-
-@media (min-width: 1120px) {
-
-    .header-buttons__button--burger,
-    .header-buttons__button--chat,
-    .header-buttons__button--profile,
-    .header-buttons__button--logo,
-    .header-buttons__button--call {
-        display: none;
-    }
-}
-
 .header-buttons__divider-1,
 .header-buttons__divider-2 {
-
-    background-color:$divider-color;
+    background-color: $divider-color;
     border-radius: 1px;
     width: 2px;
     height: 32px;
@@ -224,95 +198,75 @@
 }
 
 @media (min-width: 1120px) {
-
     .header-buttons__divider-1,
     .header-buttons__divider-2 {
         display: none;
     }
 }
 
-@media (min-width:1120px) {
+
+@media screen and (min-width:1120px) {
     .header-buttons__repair-container {
         display: flex;
-        font: 500 16px/24px 'TTLakes';
-        letter-spacing: -0.2px;
         margin-left: auto;
         column-gap: 9px;
         align-items: center;
-
     }
 }
 
-@media (min-width:1120px) {
+@media screen and (min-width:1120px) {
     .header-buttons__status-container {
         display: flex;
         align-items: center;
-        font: 500 16px/24px 'TTLakes';
-        letter-spacing: -0.2px;
         column-gap: 9px;
         align-items: center;
-
     }
 }
+
 .h1-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     height: 40px;
-      
-  @media (min-width: 320px) and (max-width: 767px) {
-    & {
-        
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
         margin-top: 24px;
     }
-  }
-  
-  @media (min-width:768px) and (max-width: 1119px) {
-   & {
+
+    @media screen and (min-width:768px) and (max-width: 1119px) {
         width: 281px;
         margin-top: 24px;
     }
-  }
-  
-  @media (min-width:1120px) {
-    & {
+
+    @media screen and (min-width:1120px) {
         margin-right: auto;
-        width: 274px;
-  
+        width: 100%;
     }
-  }
-  }
-  .h1-container__img {
+}
+
+.h1-container__img {
     width: 4px;
     height: 40px;
     border-radius: 3px;
     background-image: url("../assets/h1-container.svg");
-  }
-  
-  
-  .h1-container__text {
-   width: 100%;
+}
+
+
+.h1-container__text {
+    width: 100%;
     height: 40px;
     margin-top: 0%;
-    @include h1(); 
-  
-  @media (min-width:320px) and (max-width: 767px) {
-   & {   
-     
+    @include h1();
+
+    @media screen and (min-width:320px) and (max-width: 767px) {
         padding-left: 16px;
     }
-  }
-  
-  @media (min-width:768px) and (max-width: 1119px) {
-   & {
+
+    @media screen and (min-width:768px) and (max-width: 1119px) {
         padding-left: 24px;
     }
-  }
-  
-  @media (min-width:1120px) {
-    & {
+
+    @media screen and (min-width:1120px) {
         padding-left: 33px;
     }
-  }
-  }
-  
+}

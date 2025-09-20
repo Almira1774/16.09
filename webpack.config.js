@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { watchFile } = require('fs');
 
 
 module.exports = {
@@ -26,9 +27,8 @@ test: /\.scss$/,
 use: ['style-loader', 'css-loader', 'sass-loader'],
 },
 {
-    test: /\.(png|jpg|jpeg|gif)$/i,
-    type: 'asset/resource',
-    
+  test: /\.(png|jpe?g|gif|svg)$/i,
+  type: 'asset/resource'
   },
   {
     test: /\.svg$/,
@@ -37,10 +37,12 @@ use: ['style-loader', 'css-loader', 'sass-loader'],
         filename: path.join('icons', '[name].[contenthash][ext]'),
     }
   },
-  {
-    test: /\.(woff2?|eot|ttf|otf)$/i,
-    type: 'asset/resource'
-  },
+  
+    {
+      test: /\.(woff2?|eot|ttf|otf)$/i,
+      type: 'asset/resource'
+    },
+
   {
     test: /\.js$/,
     use: 'babel-loader',

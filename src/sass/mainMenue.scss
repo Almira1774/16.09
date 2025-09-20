@@ -1,0 +1,115 @@
+@use './variables' as *;
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+        column-gap: 24px;
+        max-width: 320px;
+        margin-top: 24px;
+        padding-left: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        column-gap: 48px;
+        max-width: 768px;
+        margin-top: 24px;
+
+    }
+
+    @media screen and (min-width: 1120px) {
+        max-width: 1096px;
+        column-gap: 39.65px;
+        margin-top: 7px;
+        padding-left: 35px;
+    }
+}
+
+.main__text--orientation-768 {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+
+    }
+}
+
+.main__text--orientation-1120 {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        display: none;
+    }
+}
+
+.main__text {
+    @include mainText;
+    height: auto;
+    /*убрать маргин утекста*/
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        max-width: 288px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        max-width: 336px;
+        padding-left: 24px;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1120px) {
+        margin-top: 8px;
+        max-width: 490px;
+    }
+}
+
+
+.main__read-more {
+    display: flex;
+    border-width: 0;
+    background-color: $background-color;
+    width: 140px;
+    height: 24px;
+    list-style: none;
+    text-decoration: none;
+    @include fontButtons;
+    color: $font-black;
+}
+
+.main__read-more--img {
+    background: url("../assets/expand.svg") center no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.main__logo-container {
+@media screen and (min-width: 320px) and (max-width:767px) {
+        margin-top: 16px;
+        max-width: 320px;
+        height: auto;
+    }
+
+
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+        max-width: 360px;
+        height: auto;
+    }
+
+
+@media screen and (min-width: 1120px) {
+        max-width: 531.35px;
+        height: auto;    
+}
+}
+
+.main__logo {
+    width: 100%;
+}

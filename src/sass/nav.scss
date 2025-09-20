@@ -1,0 +1,117 @@
+@use './variables' as *;
+
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        max-width: 320px;
+        padding-left: 16px;
+        margin-top: 24px;
+        overflow-x: scroll;
+        /* не забыть градиент*/
+
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        overflow-x: scroll;
+        max-width: 768px;
+        margin-top: 24px;
+        padding-left: 24px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        flex-wrap: wrap;
+        max-width: 1096px;
+        margin-top: 24px;
+        padding-left: 33px;
+    }
+}
+
+.menu__button {
+    display: flex;
+    height: 40px;
+    @include fontButtons;
+    color: $font-gray;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+
+    &:hover {
+        border: #B8FFEC 2px solid;
+        border-radius: 6px;
+        background-color: $header-color;
+    }
+}
+
+.menu__button--brands {
+    min-width: 233px;
+}
+
+.menu__button--services {
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        min-width: 233px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        min-width: 211px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        display: none;
+    }
+}
+
+.menu__button--centers {
+    min-width: 233px;
+}
+
+.menu__button--devices {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        min-width: 246px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+        min-width: 248px;
+    }
+
+    @media screen and (min-width:1120px) {
+        min-width: 254px;
+    }
+}
+
+.menu__button--prices {
+    min-width: 143px;
+
+    @media screen and (min-width: 1120px) {
+        min-width: 150px;
+    }
+}
+
+.menu__button--special-prices {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        min-width: 191px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+        min-width: 172px;
+    }
+
+    @media (min-width: 1120px) {
+        min-width: 180px;
+    }
+}
+
+.menu__button--reviews {
+    min-width: 95px;
+
+    @media screen and (min-width: 1120px) {
+        padding-left: 15px;
+    }
+}

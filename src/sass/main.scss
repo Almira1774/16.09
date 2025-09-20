@@ -1,5 +1,9 @@
 @use './variables' as *;
 @use './header' as *;
+@use './nav.scss' as *;
+@use './mainMenue.scss' as *;
+
+
 
 $base-color: #333;
 html {
