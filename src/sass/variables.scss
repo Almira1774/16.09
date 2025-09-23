@@ -1,6 +1,6 @@
 
 
-$background-color:#F8F8F8;
+$background-color:#e4dfdf;
 $header-color:#FFFFFF;
 $icon-color:#FF3E79;
 $border-color:#D9FFF5;
@@ -32,6 +32,14 @@ $font-white: #FFFFFF;
     font-weight: 700;
     letter-spacing: -0.6px;
     line-height: 40px;
+    color: $font-black;
+}
+@mixin h2 {
+    font-family:  $font-primary;
+    font-size: $font-medium;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 24px;
     color: $font-black;
 }
 
