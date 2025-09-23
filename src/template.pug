@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Первый проект на Webpack 
+    body
+        header.header
+            div.header-buttons
+                button.header-buttons__button.header-buttons__button--burger(type="button")
+                div.header-buttons__divider-1
+                button.header-buttons__button.header-buttons__button--logo(type="button")
+                button.header-buttons__button.header-buttons__button--call(type="button")
+                button.header-buttons__button.header-buttons__button--chat(type="button")
+                button.header-buttons__button.header-buttons__button--profile(type="button")
+                div.header-buttons__divider-2
+                div.header-buttons__repair-container
+                    span.header-buttons__button-label Оставить заявку
+                    button.header-buttons__button.header-buttons__button--repair(type="button")
+                div.header-buttons__status-container
+                    span.header-buttons__button-label Статус ремонта
+                    button.header-buttons__button.header-buttons__button--status(type="button")            
+            div.h1-container
+                    div.h1-container__img
+                    h1.h1-container__text Услуги и сервисы      
+        nav
+                    ul.menu
+                        li 
+                            a.menu__button(href="/home")
+                                span.menu__button--brands Ремонтируемые бренды            
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--devices Ремонтируемые устройства
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--services Дополнительные услуги
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--prices Цены на услуги
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--centers Адреса сервисных центров
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--special-prices Специальные цены
+                        li
+                            a.menu__button(href="/home")
+                                span.menu__button--reviews Отзывы      
+        section.main
+          div.main__text
+            p Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+            p
+              span.main__text--orientation-768 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                span.main__text--orientation-1120 , что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+            a.main__read-more(href="home")   
+              div.main__read-more--img 
+              span Читать далее       
+            div.main__logo-container 
+          picture
+            source(media="(max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
+            source(media="(min-width: 768px) and (max-width: 1119px)" srcset="../assets/logo768.png" alt="Логотип и часы работы")
+            source(media="(min-width: 1120px)" srcset="../assets/logo1020.png" alt="Логотип и часы работы")
+            img.main__logo(src="../assets/logo.png" alt="Логотип и часы работы")
+    block content    
+        
+
+
+
+include ./pug/serviceBrands.pug

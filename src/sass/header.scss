@@ -6,24 +6,27 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media screen and (min-width: $mobile-from) and (max-width: $mobile-to) {
+    @media screen and (min-width:320px) and (max-width: 767px) {
         flex-direction: column;
         flex-wrap: wrap;
         width: 320px;
+        margin-bottom: 24px;
     }
 
-    @media screen and (min-width:$tablet-from) and (max-width:$tablet-to) {
+    @media screen and (min-width:768px) and (max-width: 1119px) {
         flex-wrap: wrap;
         width: 768px;
+        margin-bottom: 32px;
     }
 
-    @media screen and (min-width: $desktop-from) {
+    @media screen and (min-width: 1120px) {
         flex-direction: row-reverse;
         align-items: center;
         margin-top: 42px;
         width: 1096px;
         height: 48px;
         background: $background-color;
+        margin-bottom: 16.22px;
     }
 }
 
@@ -41,6 +44,7 @@
         display: flex;
         height: 88px;
         background: $header-color;
+        margin-bottom: 24px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1119px) {
@@ -48,6 +52,7 @@
         column-gap: 24px;
         height: 88px;
         background: $header-color;
+        margin-bottom: 24px;
     }
 
     @media screen and (min-width: 1120px) {
@@ -228,19 +233,22 @@
     display: flex;
     flex-wrap: nowrap;
     height: 40px;
+    margin: 0;
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
-        margin-top: 24px;
+        
     }
 
     @media screen and (min-width:768px) and (max-width: 1119px) {
         width: 281px;
-        margin-top: 24px;
+        
+       
     }
 
     @media screen and (min-width:1120px) {
         margin-right: auto;
         width: 100%;
+       
     }
 }
 
@@ -255,8 +263,9 @@
 .h1-container__text {
     width: 100%;
     height: 40px;
-    margin-top: 0%;
+    margin:0;
     @include h1();
+    
 
     @media screen and (min-width:320px) and (max-width: 767px) {
         padding-left: 16px;

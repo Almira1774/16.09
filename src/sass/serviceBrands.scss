@@ -1,0 +1,466 @@
+@use './variables.scss' as *;
+@import '../css/swiper-bundle.min.css';
+
+.servicesBrands {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 196px;
+    background-color: #F8F8F8;
+    justify-content: center;
+    border-top: 1px solid rgba(217, 255, 245, 1);
+}
+
+.servicesBrands__title {
+    width: 100%;
+    height: 80px;
+    font: 400 16px/24px "TTLakes";
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-transform: uppercase;
+    padding: 16px;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    margin-bottom: 16px;
+
+}
+
+.swiper {
+
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-left: 16px;
+    flex-wrap: nowrap;
+
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+
+}
+
+.swiper-slide {
+    width: 240px;
+    display: flex;
+}
+
+.slide-content {
+    width: 240px;
+    height: 72px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #FFFFFF;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    border: #EAEAEA 1px solid;
+    border-radius: 6px;
+
+}
+
+
+
+.slide-content__Lenovo {
+    background-image: url("../assets/lenovo.svg");
+    width: 108px;
+    height: 32px;
+    margin-right: 84px;
+
+}
+
+.swiper-slide-next {
+    position: relative;
+    
+&::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 81px;
+    background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    left: 30px;
+    opacity: 1;
+}
+}
+.slide-content__Samsung {
+    background-image: url("../assets/samsung.svg");
+    background-repeat: no-repeat center ;
+    width: 116px;
+    height: 38.4px;
+    margin-right: 76px;
+
+}
+
+.slide-content__Apple {
+    background-image: url("../assets/apple.svg");
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    margin-right: 148px;
+
+}
+
+.slide-content__ViewSonic {
+    background-image: url("../assets/ViewSonic.svg");
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 21px;
+    margin-right: 66px;
+    margin-left: -2px;
+
+}
+
+.slide-content__Bosh {
+
+    background-image: url("../assets/bosh.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 128px;
+    height: 28.6px;
+    margin-right: 64px;
+}
+
+.slide-content__HP {
+    background-image: url("../assets/hp.svg");
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px;
+    margin-right: 146px;
+    margin-left: -6px;
+}
+
+.slide-content__Acer {
+    background-image: url("../assets/acer.svg");
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 24px;
+    margin-right: 98px;
+}
+
+.slide-content__Sony {
+    background-image: url("../assets/sony.svg");
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 25.6px;
+    margin-right: 66px;
+    margin-left: -2px;
+}
+
+.slide-content__link {
+    position: relative;
+
+}
+
+.slide-content__link::after {
+    position: absolute;
+    top: -20px;
+    right: -14px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF url("../assets/dropdown.svg") no-repeat center center;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+}
+
+.swiper-pagination {
+    height: 12px;
+    gap: 12px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.swiper-pagination-bullet-inactive {
+    background-color: #DDDDDD;
+
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #B5B6BC;
+
+}
+
+.hidden {
+   opacity: 0;
+   
+}
+.visible{
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+@media screen and ((min-width: 767px) and (max-width: 1119px)) {
+    .servicesBrands {
+        align-content: flex-start;
+        width: 768px;
+        height: 462px;
+        background-color: #FFFFFF;
+    }
+
+    .servicesBrands__title {
+        height: 56px;
+        padding: 16px 0 16px 24px;
+        margin: 0;
+    }
+
+    .swiper {
+        height: 232px;
+        margin: 0%;
+        position: relative;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        padding: 24px;
+        row-gap: 16px;
+        column-gap: 24px;
+        background-color:#F8F8F8;
+        align-content: flex-start;     
+
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        width: 224px !important;
+        height: 72px;        
+       
+    }
+
+    .swiper-slide-next::before {
+        display: none;
+    }
+
+    .slide-content {
+        width: 224px;
+        height: 72px;
+
+    }
+
+    .slide-content__Lenovo {
+        margin-right: 68px;
+    }
+
+    .slide-content__Samsung {
+        margin-right: 60px;
+    }
+
+    .slide-content__Apple {
+        margin-right: 132px;
+    }
+
+    .slide-content__ViewSonic {
+        margin-right: 50px;
+    }
+
+    .slide-content__Bosh {
+        margin-right: 48px;
+    }
+
+    .slide-content__HP {
+        margin-right: 130px;
+    }
+
+    .slide-content__Acer {
+        margin-right: 82px;
+    }
+
+    .slide-content__Sony {
+        margin-right: 50px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+.status{
+    display: flex;
+    height: 24px;
+    font: 500 16px/24px "TTLakes", sans-serif;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 24px;
+    border: none;
+    padding: 0;
+    background-color: #F8F8F8;
+    pointer-events: all;
+
+}
+    .status--showAll {
+       
+        width: 134px;
+       
+        
+      
+    }
+
+    .status--closeAll {
+        width: 88px;
+       
+      
+
+    }
+
+    .status__icon {
+        width: 24px;
+        height: 24px;                
+
+    }
+
+    .status__icon--Show {
+        background: url("../assets/iconShow.png") no-repeat center;
+
+    }
+
+    .status__icon--Hide {
+        background: url("../assets/iconClose.png") no-repeat center;
+
+    }
+}
+
+@media  screen and ((min-width:1120px ) and (max-width: 1280px)){
+    .servicesBrands{
+        width: 1120px;
+        height: 298px;
+        
+    }
+    .servicesBrands__title {
+        height: 56px;
+        padding: 16px 0 16px 24px;
+        margin: 0;
+    }
+
+    .swiper {
+        height: 232px;
+        margin: 0%;
+        position: relative;
+        align-content: flex-start;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        padding: 24px 32px;
+        row-gap: 16px;
+        column-gap: 32px;
+        background-color:#F8F8F8;
+        align-content: flex-start;     
+
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        width: 240px !important;
+        height: 72px;        
+       
+    }
+
+    .swiper-slide-next::before {
+        display: none;
+    }
+
+    .slide-content {
+        width: 240px;
+        height: 72px;
+
+    }
+
+    .slide-content__Lenovo {
+        margin-right: 68px;
+    }
+
+    .slide-content__Samsung {
+        margin-right: 60px;
+    }
+
+    .slide-content__Apple {
+        margin-right: 132px;
+    }
+
+    .slide-content__ViewSonic {
+        margin-right: 50px;
+    }
+
+    .slide-content__Bosh {
+        margin-right: 48px;
+    }
+
+    .slide-content__HP {
+        margin-right: 130px;
+    }
+
+    .slide-content__Acer {
+        margin-right: 82px;
+    }
+
+    .slide-content__Sony {
+        margin-right: 50px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+.status{
+    display: flex;
+    height: 24px;
+    display: flex;
+    font: 500 16px/24px "TTLakes", sans-serif;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 24px;
+    border: none;
+    padding: 0;
+    background-color: #F8F8F8;
+    pointer-events: all;
+
+}
+    .status--showAll {
+       
+        width: 134px;
+        
+        
+      
+    }
+
+    .status--closeAll {
+        width: 88px;
+        
+      
+
+    }
+
+    .status__icon {
+        width: 24px;
+        height: 24px;                
+
+    }
+
+    .status__icon--Show {
+        
+        background: url("../assets/iconShow.png") no-repeat center;
+
+    }
+
+    .status__icon--Hide {
+        background: url("../assets/iconClose.png") no-repeat center;
+
+    }
+}
+
