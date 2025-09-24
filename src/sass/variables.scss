@@ -1,15 +1,13 @@
-
-
-$background-color:#e4dfdf;
-$header-color:#FFFFFF;
-$icon-color:#FF3E79;
-$border-color:#D9FFF5;
+$background-color: #e4dfdf;
+$header-color: #FFFFFF;
+$icon-color: #FF3E79;
+$border-color: #D9FFF5;
 $divider-color: #EAEAEA;
 
 
-$btn-order-width:119px;
-$btn-order-height:32px;
-$btn-order-radius:16px;
+$btn-order-width: 119px;
+$btn-order-height: 32px;
+$btn-order-radius: 16px;
 
 $icon-width: 40px;
 $icon-height: 40px;
@@ -23,19 +21,20 @@ $font-large: 24px;
 $font-xlarge: 28px;
 
 $font-black: #1B1C21;
-$font-gray:  #7E7E82;
+$font-gray: #7E7E82;
 $font-white: #FFFFFF;
 
 @mixin h1 {
-    font-family:  $font-primary;
+    font-family: $font-primary;
     font-size: $font-xlarge;
     font-weight: 700;
     letter-spacing: -0.6px;
     line-height: 40px;
     color: $font-black;
 }
+
 @mixin h2 {
-    font-family:  $font-primary;
+    font-family: $font-primary;
     font-size: $font-medium;
     font-weight: 400;
     letter-spacing: -0.2px;
@@ -43,29 +42,30 @@ $font-white: #FFFFFF;
     color: $font-black;
 }
 
-@mixin mainText{
+@mixin mainText {
     font-family: $font-primary;
     font-size: $font-small;
-    color:$font-black;
+    color: $font-black;
     font-weight: 400;
     letter-spacing: 0.2px;
 }
 
-@mixin fontButtons{
-font-family: $font-primary;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: -0.2px;
+@mixin fontButtons {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
 
 }
+
+@mixin titleGradient {
+    background-image: linear-gradient(-270deg, $background-color 0%, $header-color 98.61%);
+}
+
 
 $mobile-from: 320px;
 $mobile-to: 767px;
 $tablet-from: 768px;
 $tablet-to: 1119px;
 $desktop-from: 1120px;
-
-
-
-

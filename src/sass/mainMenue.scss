@@ -13,11 +13,13 @@
         column-gap: 24px;
         max-width: 320px;
         padding-left: 16px;
+        margin-bottom: 24px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1119px) {
         column-gap: 48px;
         max-width: 768px;
+        margin-bottom: 32px;
 
     }
 
@@ -25,6 +27,7 @@
         max-width: 1096px;
         column-gap: 39.65px;
         padding-left: 35px;
+        margin-bottom: 51px;
     }
 }
 
