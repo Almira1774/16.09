@@ -7,24 +7,25 @@
     background-color: $background-color;
     justify-content: center;
     border-top: 1px solid rgba(217, 255, 245, 1);
+    overflow: hidden; /* Скрыть переполнение */
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         width: 320px;
-        height: 196px;
+        min-height: 196px;
         margin-bottom: 24px;
     }
 
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
         align-content: flex-start;
         width: 768px;
-        height: 462px;
+        min-height: 288px;
         background-color: $header-color;
         margin-bottom: 32px;
     }
 
     @media screen and (min-width: 1120px) {
         width: 1120px;
-        height: 298px;
+        min-height: 288px;
         margin-left: auto;
         margin-right: auto;  
         margin-bottom: 50px;     
@@ -69,19 +70,18 @@
 
     @media screen and ((min-width:320px) and (max-width: 767px)) {
         margin-left: 16px;
-        height: 100px;
+        min-height: 100px;
     }
 
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
 
-        height: 232px;
-        margin: 0%;
+        min-height: 208px;
+    
         position: relative;
     }
 
     @media screen and (min-width:1120px) {
-        height: 232px;
-        margin: 0%;
+        min-height: 208px;
         position: relative;
         align-content: flex-start;
     }
@@ -93,7 +93,8 @@
     width: 100%;
     row-gap: 16px;
     background-color: $background-color;
-    height: 100%;
+    max-height: 100%;
+   
     
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
@@ -103,14 +104,14 @@
 
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
         flex-wrap: wrap;
-        padding: 24px;
+        padding: 0 24px; 
         column-gap: 24px;
         align-content: flex-start;
     }
 
     @media screen and (min-width: 1120px) {
         flex-wrap: wrap;
-        padding: 24px 32px;
+       padding: 0 32px;
         column-gap: 32px;
         align-content: flex-start;
     }
@@ -356,12 +357,11 @@
 }
 
 .hidden {
-    opacity: 0;
+   display: none;
 }
 
 .visible {
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+   display: inline;
 }
 
 .status {
@@ -371,7 +371,7 @@
         @include fontButtons;
         position: absolute;
         z-index: 1;
-        bottom: 0%;
+        bottom: 0;
         left: 24px;
         border: none;
         padding: 0;

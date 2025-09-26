@@ -1,5 +1,8 @@
+import Swiper from 'swiper/bundle';
+import '../js/swiper-bundle.min.js'; 
+
 document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".swiper", {
+    const brandsSwiper = new Swiper(".brands-swiper", {
         slidesPerView: 1.2,
         slidesPerGroup: 1,
         centeredSlides: false,
@@ -16,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         on: {
             init: function () {
                 document
-                    .querySelectorAll(".swiper-slide-active .slide-content")
+                    .querySelectorAll(".brands-swiper.swiper-slide-active .slide-content")
                     .forEach((el) => {
                         el.style.opacity = "1";
                         el.style.transform = "translateY(0)";
@@ -27,20 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const button = document.querySelector('.status');
     const icon = button.querySelector('.status__icon');
-    const slides = document.querySelectorAll('.swiper-slide');
+    const slides = document.querySelectorAll('.brands-swiper .swiper-slide');
     let SlidesCount = 0;
     const screen = window.innerWidth;
-
-    
     let heightToOpen, heightToClose;
+
+
     if (screen > 767 && screen < 1119) {
         SlidesCount = 5;
-        heightToOpen = 406;
-        heightToClose = 232;
+        heightToOpen = 384;
+        heightToClose = 208;
+       
+        
     } else if (screen > 1119 && screen < 1281) {
         SlidesCount = 3;
-        heightToOpen = 342;
-        heightToClose = 232;
+        heightToOpen = 296;
+        heightToClose = 208;
     }
 
     
@@ -68,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const buttonToOpen = button.classList.contains('status--showAll');
         const buttonToClose = button.classList.contains('status--closeAll');
         
-        const navHeight = document.querySelector('.swiper');
+        const navHeight = document.querySelector('.brands-swiper');
         const textNode = button.querySelector('.status__icon + span');
 
         if (buttonToOpen) {

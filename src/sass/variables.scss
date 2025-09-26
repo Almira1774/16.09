@@ -63,9 +63,7 @@ $font-white: #FFFFFF;
     background-image: linear-gradient(-270deg, $background-color 0%, $header-color 98.61%);
 }
 
-
-$mobile-from: 320px;
-$mobile-to: 767px;
-$tablet-from: 768px;
-$tablet-to: 1119px;
-$desktop-from: 1120px;
+@mixin slidesBorder {
+    border: 1px solid $divider-color;
+    border-radius: 6px;
+}
