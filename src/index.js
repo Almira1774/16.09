@@ -5,6 +5,7 @@ import './assets/logo768.png'
 import './assets/logo1020.png'
 import './js/serviceBrands.js'
 import './js/serviceGadgets.js'
+import './js/prices.js'
 
 
 

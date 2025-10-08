@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         centeredSlides: false,
         loop: true,
         pagination: {
-            el: ".gadgets-swiper.swiper-pagination",
+            el: ".swiper-pagination",
             clickable: true,
         },
         effect: 'coverflow',

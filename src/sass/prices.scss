@@ -1,0 +1,334 @@
+@use './variables.scss' as *;
+@import '../css/swiper-bundle.min.css';
+
+
+.prices {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and ((min-width:320px) and (max-width: 767px)) {
+        width: 320px;
+        min-height: 508px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+        width: 768px;
+        min-height: 568px;
+        margin-bottom: 47px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        width: 1120px;
+        min-height: 576px;
+        margin-bottom: 50px;
+    }
+
+
+
+    .prices__title {
+        width: 100%;
+        @include h2;
+        color: $font-gray;
+        text-transform: uppercase;
+        padding-left: 24px;
+        background-color: $header-color;
+        @include titleGradient;
+        align-content: center;
+        border-top: 1px solid #D9FFF5;
+
+        @media screen and ((min-width: 320px) and (max-width: 767px)) {
+            height: 56px;
+            padding: 0px 16px;
+            margin-bottom: 16px;
+        }
+
+        @media screen and (min-width:768px) {
+            height: 56px;
+            margin-bottom: 31px;
+        }
+    }
+
+    .swiper {
+        max-height: 100%;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            max-width: 304px;
+            margin-right: 0;
+            position: relative;
+            margin-bottom: 16px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 200px;
+                right: 0;
+                top: 0;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+                z-index: 3;
+            }
+        }
+
+        @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+            max-width: 720px;
+        }
+
+        @media screen and (min-width: 1120px) {
+            max-width: 1056px;
+        }
+
+    }
+
+
+    .swiper-wrapper {
+        display: inline-table;
+        box-sizing: border-box;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            height: 216px;
+            display: flex;
+            column-gap: 16px;
+            margin-bottom: 16px;
+
+        }
+
+        @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+            height: 356px;
+        }
+
+        @media screen and (min-width: 1120px) {
+            height: 356px;
+        }
+    }
+      
+
+    .swiper-slide {
+        display: table-row-group;
+        background-color: $header-color;
+        border-radius: 6px;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            width: 260px !important;
+            display: flex;
+            height: 200px;
+            flex-direction: column;
+            padding: 16px;
+            max-height: 100%;
+            position: relative;
+        }
+
+        @media screen and (min-width: 768px) {
+            &:not(:first-child):not(:last-child)::after {
+                content: "";
+                position: absolute;
+                width: 95%;
+                height: 1px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 1px solid #06be8d;
+            }
+            
+
+            border-top-left-radius: 6px;
+
+
+        }
+
+        @media screen and (min-width:1120px) {}
+
+    }
+
+  
+
+
+    .swiper-slide--header {
+        display: table-header-group;
+        height: 32px;
+        vertical-align: text-top;
+        border-spacing: 20px;
+        color: #7E7E82;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    .header-title {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+
+        @media screen and (min-width:320px) and (max-width: 767px) {
+            display: none;
+
+        }
+
+        @media screen and (min-width:768px) and (max-width: 1119px) {
+            padding-left: 16px;
+
+            &:first-child {
+                border-top-left-radius: 6px;
+            }
+
+            &:last-child {
+
+                border-top-right-radius: 6px;
+            }
+        }
+
+        @media screen and (min-width: 1120px) {
+            padding-left: 24px;
+
+            &:first-child {
+                border-top-left-radius: 6px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 6px;
+            }
+        }
+    }
+
+
+
+    .slide-content {
+        display: table-row;
+        vertical-align: middle;
+        max-width: 100%;
+        position: relative;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            max-height: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+            
+           
+        }
+    }
+    .order {
+        @include btnOrder;
+        padding: 4px 0px 4px 12px;
+        background-image: url('../assets/goside.png');
+        background-repeat: no-repeat;
+        background-position: 87px center;
+       
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            position: absolute;
+          
+
+        }
+        @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+            margin: 16px;
+            
+        }
+        @media screen and (min-width:1120px) {
+            text-align: center;
+        }
+
+    }
+
+    .item-container {
+        display: table-cell;
+        width: auto;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+
+        @media screen and (min-width: 768px) {
+            vertical-align: middle;            
+            text-align: center;            
+        }
+
+    }
+    .last-item {
+        border-bottom-right-radius: 6px;
+    }
+    
+    .fourth-item {
+        border-bottom-left-radius: 6px;
+    }
+
+    .item-title {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        color: #7E7E82;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            display: inline-flex;
+
+
+        }
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+    .item {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        min-width: 74px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            display: inline-flex;
+        }
+
+        @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+            padding-left: 16px;
+            white-space: nowrap;
+        }
+
+        @media screen and (min-width: 1120px) {
+            padding-left: 24px;
+        }
+    }
+
+
+
+
+    .swiper-pagination {
+        height: 12px;
+        gap: 12px;
+        opacity: 1;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 0.1;
+    }
+
+    .swiper-pagination-bullet-inactive {
+        background-color: #DDDDDD;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: #B5B6BC;
+    }
+}

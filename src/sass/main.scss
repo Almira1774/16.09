@@ -2,9 +2,10 @@
 @use './header' as *;
 @use './nav.scss' as *;
 @use './mainMenue.scss' as *;
+@use '../css/swiper-bundle.min.css' as *;
 @use './serviceBrands.scss' as *;
 @use './serviceGadgets.scss' as *;
-@import '../css/swiper-bundle.min.css';
+@use './prices.scss' as *;
 
 /* Проверить все круги*/
 
@@ -38,3 +39,4 @@ body {
     height: 1925px;  
 }
 }
+/* Пагинация у третьего слайдера. бордеры закруглить у слайдеров */

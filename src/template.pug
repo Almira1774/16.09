@@ -57,7 +57,7 @@ html(lang="en")
               span Читать далее       
             div.main__logo-container 
           picture
-            source(media="(max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
+            source(media="(min-width:320px) and (max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
             source(media="(min-width: 768px) and (max-width: 1119px)" srcset="../assets/logo768.png" alt="Логотип и часы работы")
             source(media="(min-width: 1120px)" srcset="../assets/logo1020.png" alt="Логотип и часы работы")
             img.main__logo(src="../assets/logo.png" alt="Логотип и часы работы")
@@ -65,3 +65,5 @@ html(lang="en")
 include ./pug/serviceBrands.pug
     block gadgets
 include ./pug/serviceGadgets.pug
+    block prices
+include ./pug/prices.pug
