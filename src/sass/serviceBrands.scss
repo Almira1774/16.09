@@ -70,18 +70,18 @@
 
     @media screen and ((min-width:320px) and (max-width: 767px)) {
         margin-left: 16px;
-        min-height: 100px;
+        height: 100px;
     }
 
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
 
-        min-height: 208px;
+        height: 208px;
     
         position: relative;
     }
 
     @media screen and (min-width:1120px) {
-        min-height: 208px;
+        height: 208px;
         position: relative;
         align-content: flex-start;
     }

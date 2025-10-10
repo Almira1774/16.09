@@ -103,7 +103,7 @@
             height: 356px;
         }
     }
-      
+
 
     .swiper-slide {
         display: table-row-group;
@@ -131,18 +131,15 @@
                 transform: translateX(-50%);
                 border-bottom: 1px solid #06be8d;
             }
-            
 
             border-top-left-radius: 6px;
-
-
         }
 
         @media screen and (min-width:1120px) {}
 
     }
 
-  
+
 
 
     .swiper-slide--header {
@@ -166,7 +163,6 @@
 
         @media screen and (min-width:320px) and (max-width: 767px) {
             display: none;
-
         }
 
         @media screen and (min-width:768px) and (max-width: 1119px) {
@@ -211,29 +207,26 @@
             max-height: 100%;
         }
 
-        @media screen and (min-width: 768px) {
-            
-           
-        }
+        @media screen and (min-width: 768px) {}
     }
+
     .order {
         @include btnOrder;
         padding: 4px 0px 4px 12px;
         background-image: url('../assets/goside.png');
         background-repeat: no-repeat;
         background-position: 87px center;
-       
+
 
         @media screen and ((min-width:320px) and (max-width: 767px)) {
             position: absolute;
             text-align: middle;
-          
-
         }
+
         @media screen and ((min-width: 768px) and (max-width: 1119px)) {
             margin: 16px;
-            
         }
+
         @media screen and (min-width:1120px) {
             text-align: center;
         }
@@ -251,15 +244,16 @@
         }
 
         @media screen and (min-width: 768px) {
-            vertical-align: middle;            
-            text-align: center;            
+            vertical-align: middle;
+            text-align: center;
         }
 
     }
+
     .last-item {
         border-bottom-right-radius: 6px;
     }
-    
+
     .fourth-item {
         border-bottom-left-radius: 6px;
     }
@@ -273,8 +267,6 @@
 
         @media screen and ((min-width:320px) and (max-width: 767px)) {
             display: inline-flex;
-
-
         }
 
         @media screen and (min-width:768px) {
@@ -336,27 +328,27 @@
     }
 }
 
-.offer{
-    display:flex;
+.offer {
+    display: flex;
     flex-direction: column;
+
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         max-width: 288px;
         min-height: 138px;
         padding-left: 16px;
         margin-right: auto;
         row-gap: 16px;
-        
     }
+
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
-        
         max-width: 450px;
         min-height: auto;
         padding-left: 24px;
         margin-right: auto;
         row-gap: 16px;
-        
     }
-    @media screen and (min-width: 1120px){
+
+    @media screen and (min-width: 1120px) {
         max-width: 450px;
         min-height: auto;
         padding-left: 32px;
@@ -364,12 +356,13 @@
         row-gap: 16px;
     }
 }
-.offer__text{
-   @include mainText;
+
+.offer__text {
+    @include mainText;
     line-height: 18px;
-    
 }
-.offer__link{
+
+.offer__link {
     color: $font-black;
     text-decoration: none;
     font-size: 16px;
@@ -377,27 +370,29 @@
     line-height: 24px;
     letter-spacing: -0.2px;
     position: relative;
+
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        &::after{
-            content: url('../assets/more.png') ;
+        &::after {
+            content: url('../assets/more.png');
             width: 24px;
             height: 27px;
             position: absolute;
             left: 102px;
             bottom: -2px;
         }
-        
+
     }
-    @media screen and (min-width: 768px)  {
-        &::after{
-            content: url('../assets/more.png') ;
+
+    @media screen and (min-width: 768px) {
+        &::after {
+            content: url('../assets/more.png');
             width: 24px;
             height: 27px;
             position: absolute;
             left: 292px;
             bottom: -2px;
         }
-        
+
     }
 
 }

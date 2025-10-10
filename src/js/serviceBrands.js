@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         heightToClose = 208;
        
         
-    } else if (screen > 1119 && screen < 1281) {
+    } else if (screen > 1120) {
         SlidesCount = 3;
         heightToOpen = 296;
         heightToClose = 208;

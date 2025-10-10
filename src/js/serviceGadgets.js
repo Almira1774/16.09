@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gadgetsSlidesCount = 3;
         heightToOpen = 384;
         heightToClose = 208;
-    } else if (gadgetsScreen > 1119 && gadgetsScreen < 1281) {
+    } else if (gadgetsScreen > 1120 ) {
         gadgetsSlidesCount = 2;
         heightToOpen = 384;
         heightToClose = 208;
