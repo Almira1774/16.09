@@ -39,4 +39,65 @@ body {
     height: auto;  
 }
 }
+
+.about-us {
+    border-top: 1px solid darkcyan;
+    display: flex;
+    @media screen and ((min-width: 320px) and (max-width: 767px)){
+        padding-top: 16px;
+        max-width: 320px;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 16px;        
+    }
+    @media screen and ((min-width: 768px) and (max-width: 1119px)){
+        min-height: 81px;
+        max-width: 768px;
+        flex-direction: row;
+        padding: 0 24px;
+        justify-content: space-between;    
+ }
+
+ @media screen and (min-width: 1120px) {
+    padding: 32px 32px 0 32px;
+    min-height: 65px;
+    flex-direction: row;
+    justify-content: space-between; 
+    
+ }
+}
+.about-us__text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: $font-gray;
+    text-decoration: none;
+    @media screen and ((min-width: 320px) and (max-width: 767px)) {
+        
+    }
+    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+        min-width: 214px;
+     max-width: 218px;
+      padding-top: 32px;
+     &:first-child{
+        text-align: left;
+    }
+    &:last-child{
+        text-align: right;
+    } 
+    }
+    @media screen and (min-width: 1120px)  {
+        min-width: 214px;
+     max-width: 333px;
+      padding-top: 32px;
+     &:first-child{
+        text-align: left;
+    }
+    &:last-child{
+        text-align: right;
+    } 
+    }
+
+}
 /* Пагинация у третьего слайдера. бордеры закруглить у слайдеров */

@@ -344,6 +344,7 @@
         min-height: 138px;
         padding-left: 16px;
         margin-right: auto;
+        row-gap: 16px;
         
     }
     @media screen and ((min-width: 768px) and (max-width: 1119px)) {
@@ -372,12 +373,12 @@
     color: $font-black;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     position: relative;
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        ::after{
+        &::after{
             content: url('../assets/more.png') ;
             width: 24px;
             height: 27px;
@@ -388,7 +389,7 @@
         
     }
     @media screen and (min-width: 768px)  {
-        ::after{
+        &::after{
             content: url('../assets/more.png') ;
             width: 24px;
             height: 27px;
