@@ -44,14 +44,13 @@ $font-white: #FFFFFF;
 }
 
 @mixin mainText {
-    font-family: $font-primary;
     color: $font-black;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.2px;
 }
 
 @mixin fontButtons {
-    font-family: $font-primary;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;

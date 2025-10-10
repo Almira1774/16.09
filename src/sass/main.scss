@@ -27,16 +27,16 @@ body {
 
  @media screen and (min-width: 320px) and (max-width: 767px) {
     max-width: 320px;    
-    height: 1810px;
+    height: auto;
   
  }
  @media screen and (min-width: 768px) and (max-width: 1119px) {
-    height: 1857px;
+    height: auto;
 
 }
 @media screen and (min-width: 1120px) {
     max-width: 1120px;
-    height: 1925px;  
+    height: auto;  
 }
 }
 /* Пагинация у третьего слайдера. бордеры закруглить у слайдеров */
