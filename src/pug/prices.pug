@@ -1,7 +1,7 @@
 block prices 
 section.prices 
-  h4.prices__title  Цены на услуги
-  div.prices-swiper.swiper
+  h4(id="prices").prices__title  Цены на услуги
+  div.prices__swiper.swiper
     div.swiper-wrapper
       div.swiper-slide.swiper-slide--header
         div.slide-content 
@@ -11,73 +11,73 @@ section.prices
           div.header-title 
       div.swiper-slide
         div.slide-content
-          div.item-container
-            span.item-title Ремонтные услуги
-            div.item Диагностика
-          div.item-container
-            span.item-title Цена
-            div.item Бесплатно
-          div.item-container
-            span.item-title Срок
-            div.item 30 мин
-          div.item-container
-            button.item.order Заказать
+          div.content
+            span.content__title Ремонтные услуги
+            div.content__item Диагностика
+          div.content
+            span.content__title Цена
+            div.content__item Бесплатно
+          div.content
+            span.content__title Срок
+            div.content__item 30 мин
+          div.content
+            button.content__item.order Заказать
       div.swiper-slide
         div.slide-content
-          div.item-container
-            span.item-title Ремонтные услуги
-            div.item Замена дисплея 
-          div.item-container
-            span.item-title Цена
-            div.item 1000 ₽
-          div.item-container
-            span.item-title Срок
-            div.item 30-120 мин
-          div.item-container
-            button.item.order Заказать
+          div.content
+            span.content__title Ремонтные услуги
+            div.content__item Замена дисплея 
+          div.content
+            span.content__title Цена
+            div.content__item 1000 ₽
+          div.content
+            span.content__title Срок
+            div.content__item 30-120 мин
+          div.content
+            button.content__item.order Заказать
       div.swiper-slide
         div.slide-content
-          div.item-container
-            span.item-title Ремонтные услуги
-            div.item Замена полифонического динамика
-          div.item-container  
-            span.item-title Цена
-            div.item 1000 ₽
-          div.item-container
-            span.item-title Срок
-            div.item 30-120 мин
-          div.item-container
-            button.item.order Заказать
+          div.content
+            span.content__title Ремонтные услуги
+            div.content__item Замена полифонического динамика
+          div.content  
+            span.content__title Цена
+            div.content__item 1000 ₽
+          div.content
+            span.content__title Срок
+            div.content__item 30-120 мин
+          div.content
+            button.content__item.order Заказать
       div.swiper-slide
         div.slide-content
-          div.item-container
-            span.item-title Ремонтные услуги
-            div.item Тестирование с выдачей технического заключения 
-          div.item-container
-            span.item-title Цена
-            div.item 1000 ₽
-          div.item-container
-            span.item-title Срок
-            div.item 30-120 мин
-          div.item-container
-            button.item.order Заказать
+          div.content
+            span.content__title Ремонтные услуги
+            div.content__item Тестирование с выдачей технического заключения 
+          div.content
+            span.content__title Цена
+            div.content__item 1000 ₽
+          div.content
+            span.content__title Срок
+            div.content__item 30-120 мин
+          div.content
+            button.content__item.order Заказать
       div.swiper-slide
         div.slide-content
-          div.item-container.fourth-item
-            span.item-title Ремонтные услуги
-            div.item Замена программного обеспечения
-          div.item-container 
-            span.item-title Цена
-            div.item 1000 ₽
-          div.item-container
-            span.item-title Срок
-            div.item 30-120 мин
-          div.item-container.last-item
-            button.item.order Заказать
+          div.content.fourth-item
+            span.content__title Ремонтные услуги
+            div.content__item Замена программного обеспечения
+          div.content 
+            span.content__title Цена
+            div.content__item 1000 ₽
+          div.content
+            span.content__title Срок
+            div.content__item 30-120 мин
+          div.content.last-item
+            button.content__item.order Заказать
     div.swiper-pagination
   div.offer
     div.offer__text Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
-    a(href='').offer__link Получить коммерческое предложение
+    a(id="special-prices"  href='home').offer__link Получить коммерческое предложение
 
   
     

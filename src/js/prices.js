@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import '../js/swiper-bundle.min.js'; 
 
 document.addEventListener("DOMContentLoaded", function () {   
-    const gadgetsSwiper = new Swiper(".prices-swiper", {
+    const gadgetsSwiper = new Swiper(".prices__swiper", {
         slidesPerView: 1.2,
         slidesPerGroup: 1,
         centeredSlides: false,
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         on: {
             init: function () {
                 document
-                    .querySelectorAll(".prices-swiper .swiper-slide-active .slide-content")
+                    .querySelectorAll(".prices__swiper .swiper-slide-active .slide-content")
                     .forEach((el) => {
                         el.style.opacity = "1";
                         el.style.transform = "translateY(0)";

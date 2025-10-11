@@ -26,22 +26,22 @@ html(lang="en")
         nav
                     ul.menu
                         li 
-                            a.menu__button(href="/home")
+                            a.menu__button(href="#brands")
                                 span.menu__button--brands Ремонтируемые бренды            
                         li
-                            a.menu__button(href="/home")
+                            a.menu__button(href="#gadgets")
                                 span.menu__button--devices Ремонтируемые устройства
                         li
                             a.menu__button(href="/home")
                                 span.menu__button--services Дополнительные услуги
                         li
-                            a.menu__button(href="/home")
+                            a.menu__button(href="#prices")
                                 span.menu__button--prices Цены на услуги
                         li
                             a.menu__button(href="/home")
                                 span.menu__button--centers Адреса сервисных центров
                         li
-                            a.menu__button(href="/home")
+                            a.menu__button(href="#special-prices")
                                 span.menu__button--special-prices Специальные цены
                         li
                             a.menu__button(href="/home")
@@ -57,10 +57,10 @@ html(lang="en")
               span Читать далее       
             div.main__logo-container 
           picture
-            source(media="(min-width:320px) and (max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
-            source(media="(min-width: 768px) and (max-width: 1119px)" srcset="../assets/logo768.png" alt="Логотип и часы работы")
+            source(media="(min-width:320px) and (max-width: 767px)" srcset="./assets/logo320.png" alt="Логотип и часы работы")
+            source(media="(min-width: 768px) and (max-width: 1119px)" srcset="./assets/logo768.png" alt="Логотип и часы работы")
             source(media="(min-width: 1120px)" srcset="./assets/logo1020.png" alt="Логотип и часы работы")
-            img.main__logo(src="../assets/logo.png" alt="Логотип и часы работы")
+            img.main__logo(src="./assets/logo.png" alt="Логотип и часы работы")
         block content    
         include ./pug/serviceBrands.pug
         block gadgets
