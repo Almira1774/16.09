@@ -34,8 +34,6 @@
 .servicesGadgets__title {
     width: 100%;
     @include h2;
-    color: #7E7E82;
-    text-transform: uppercase;
     padding: 16px 0 16px 24px;
     background-color: $header-color;
     @include titleGradient;

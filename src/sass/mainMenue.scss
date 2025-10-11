@@ -81,13 +81,8 @@
     border-width: 0;
     background-color: $background-color;
     width: 140px;
-    height: 24px;
-    list-style: none;
-    text-decoration: none;
-    
-    @include fontButtons;
-    color: $font-black;
-    
+    height: 24px; 
+    @include link-text;    
 }
 
 .main__read-more--img {
