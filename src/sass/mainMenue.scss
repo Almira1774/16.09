@@ -79,7 +79,6 @@
 .main__read-more {
     display: flex;
     border-width: 0;
-    background-color: $background-color;
     width: 140px;
     height: 24px; 
     @include link-text;    
