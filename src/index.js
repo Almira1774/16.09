@@ -34,7 +34,7 @@ if (location.hash) {
 const burgerClose = document.querySelector(".block-header__button--burger");
 const back = document.querySelector('.block');
 const burgerShows = document.querySelector('.header-buttons__button--burger');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.overlay-hidden');
 
 const showUl = function() {
     back.classList.toggle('not-visible'); 
