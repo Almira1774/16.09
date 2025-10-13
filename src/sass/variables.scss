@@ -1,4 +1,4 @@
-$background-color: #e4dfdf;
+$background-color: #d2d3cc;
 $header-color: #FFFFFF;
 $icon-color: #FF3E79;
 $border-color: #D9FFF5;
@@ -75,7 +75,9 @@ $font-white: #FFFFFF;
     border-radius: 6px;
 }
 
-
+@mixin title-border{
+    border-top: 1px solid $border-color;
+}
 @mixin btnOrder {
     width: $btn-order-width;
     height: $btn-order-height;

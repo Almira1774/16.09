@@ -45,7 +45,9 @@ html(lang="en")
                                 span.menu__button--special-prices Специальные цены
                         li
                             a.menu__button(href="/home")
-                                span.menu__button--reviews Отзывы      
+                                span.menu__button--reviews Отзывы 
+        block modal  
+        include ./pug/modal.pug    
         section.main
           div.main__text
             p Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
@@ -57,10 +59,10 @@ html(lang="en")
               span Читать далее       
             div.main__logo-container 
           picture
-            source(media="(min-width:320px) and (max-width: 767px)" srcset="./assets/logo320.png" alt="Логотип и часы работы")
-            source(media="(min-width: 768px) and (max-width: 1119px)" srcset="./assets/logo768.png" alt="Логотип и часы работы")
+            source(media="(min-width:320px) and (max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
+            source(media="(min-width: 768px) and (max-width: 1119px)" srcset="../assets/logo768.png" alt="Логотип и часы работы")
             source(media="(min-width: 1120px)" srcset="./assets/logo1020.png" alt="Логотип и часы работы")
-            img.main__logo(src="./assets/logo.png" alt="Логотип и часы работы")
+            img.main__logo(src="../assets/logo.png" alt="Логотип и часы работы")
         block content    
         include ./pug/serviceBrands.pug
         block gadgets

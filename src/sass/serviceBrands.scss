@@ -5,8 +5,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-top: 1px solid rgba(217, 255, 245, 1);
+    @include title-border;
     overflow: hidden; /* Скрыть переполнение */
+    
+    margin-left: auto;
+    margin-right: auto;  
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         width: 320px;
@@ -24,8 +27,6 @@
     @media screen and (min-width: 1120px) {
         width: 1120px;
         min-height: 288px;
-        margin-left: auto;
-        margin-right: auto;  
         margin-bottom: 50px;     
     }
 

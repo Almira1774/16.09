@@ -1,11 +1,13 @@
 @use './variables' as *;
 @use './header' as *;
+@use './modal.scss' as *;
 @use './nav.scss' as *;
 @use './mainMenue.scss' as *;
 @use '../css/swiper-bundle.min.css' as *;
 @use './serviceBrands.scss' as *;
 @use './serviceGadgets.scss' as *;
 @use './prices.scss' as *;
+
 
 /* Проверить все круги*/
 
@@ -41,7 +43,7 @@ body {
 }
 
 .about-us {
-    border-top: 1px solid darkcyan;
+    @include title-border;
     display: flex;
     @media screen and ((min-width: 320px) and (max-width: 767px)){
         padding-top: 16px;

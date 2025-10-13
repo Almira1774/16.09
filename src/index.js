@@ -6,7 +6,7 @@ import './assets/logo1020.png'
 import './js/serviceBrands.js'
 import './js/serviceGadgets.js'
 import './js/prices.js'
-
+import './sass/modal.scss'
 
 
 const hello = require('./js/hello')
@@ -31,3 +31,23 @@ window.addEventListener('hashchange', () => {
 if (location.hash) {
     highlightElement(location.hash.substring(1));
 }*/
+const burgerClose = document.querySelector(".block-header__button--burger");
+const back = document.querySelector('.block');
+const burgerShows = document.querySelector('.header-buttons__button--burger');
+const overlay = document.querySelector('.overlay');
+
+const showUl = function() {
+    back.classList.toggle('not-visible'); 
+
+    if (!back.classList.contains('not-visible')) {
+        overlay.classList.add('overlay');
+        overlay.classList.remove('overlay-hidden');
+    } else {
+        overlay.classList.add('overlay-hidden');
+        overlay.classList.remove('overlay');
+    }
+}
+
+burgerClose.addEventListener('click', showUl);
+burgerShows.addEventListener('click', showUl);
+

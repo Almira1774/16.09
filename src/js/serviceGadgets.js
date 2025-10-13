@@ -32,25 +32,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const gadgetsIcon = gadgetsButton.querySelector('.status-gadgets__icon');
     const gadgetsSlides = document.querySelectorAll('.gadgets-swiper .swiper-wrapper .swiper-slide');
     let gadgetsSlidesCount = 0;
-    const gadgetsScreen = window.innerWidth;
-
-    
     let heightToOpen, heightToClose;
-    if (gadgetsScreen > 767 && gadgetsScreen < 1119) {
-        gadgetsSlidesCount = 3;
-        heightToOpen = 384;
-        heightToClose = 208;
-    } else if (gadgetsScreen > 1120 ) {
-        gadgetsSlidesCount = 2;
-        heightToOpen = 384;
-        heightToClose = 208;
-    }
 
-    
-    for (let i = gadgetsSlides.length - gadgetsSlidesCount; i < gadgetsSlides.length; i++) {
-        gadgetsSlides[i].classList.add('hidden');
-    }
-    gadgetsButton.classList.add('status-gadgets--showAll');
+    const updateScreenValues = () => {
+        const screen = window.innerWidth; // Обновляем значение screen
+
+        if (screen > 767 && screen < 1119) {
+            gadgetsSlidesCount = 3;
+            heightToOpen = 384;
+            heightToClose = 208;
+        } else if (screen > 1120) {
+            gadgetsSlidesCount = 2;
+            heightToOpen = 384;
+            heightToClose = 208;
+        }
+
+        // Обновляем видимость слайдов
+        for (let i = gadgetsSlides.length - gadgetsSlidesCount; i < gadgetsSlides.length; i++) {
+            gadgetsSlides[i].classList.add('hidden');
+        }
+        gadgetsButton.classList.add('status-gadgets--showAll');
+    };
+
+    // Инициализация значений при загрузке страницы
+    updateScreenValues();
+
+    // Обработчик события resize
+    window.addEventListener('resize', updateScreenValues);
 
     const toggleGadgetsSlides = function (count) {
         const totalSlides = gadgetsSlides.length;
@@ -77,11 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (gadgetsButtonToOpen) {
             gadgetsButton.classList.remove('status-gadgets--showAll');
             gadgetsButton.classList.add('status-gadgets--closeAll');
-          textNode.textContent = 'Скрыть';
+            textNode.textContent = 'Скрыть';
             gadgetsIcon.classList.remove('status-gadgets__icon--Show');
             gadgetsIcon.classList.add('status-gadgets__icon--Hide');
-            console.log(gadgetsIcon.className)
-            gadgetsButton.insertBefore(gadgetsIcon, gadgetsButton.firstChild);
             navHeight.style.height = heightToOpen + 'px';
             toggleGadgetsSlides(gadgetsSlidesCount);
         } else if (gadgetsButtonToClose) {
@@ -89,10 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gadgetsButton.classList.add('status-gadgets--showAll');
             gadgetsIcon.classList.remove('status-gadgets__icon--Hide');
             gadgetsIcon.classList.add('status-gadgets__icon--Show');
-            gadgetsButton.insertBefore(gadgetsIcon, gadgetsButton.firstChild);
-            console.log(gadgetsIcon.className)
-            
-           
             textNode.textContent = 'Показать все';
             navHeight.style.height = heightToClose + 'px';
             toggleGadgetsSlides(gadgetsSlidesCount);
@@ -100,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     gadgetsButton.addEventListener('click', gadgetsIconChange);
-
 });
+
 
 
 
