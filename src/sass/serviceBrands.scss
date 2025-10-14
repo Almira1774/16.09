@@ -17,17 +17,18 @@
         margin-bottom: 24px;
     }
 
-    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         align-content: flex-start;
         width: 768px;
         min-height: 288px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         width: 1120px;
         min-height: 288px;
-        margin-bottom: 50px;     
+        margin-bottom: 50px;  
+        margin-right: 0;
     }
 
 /* линки поправить*/
@@ -47,11 +48,11 @@
         margin-bottom: 16px;
     }
 
-    @media screen and ((min-width:767px) and (max-width: 1119px)) {
+    @media screen and ((min-width:767px) and (max-width: 1424px)) {
         height: 56px;
     }
 
-    @media screen and (min-width:1120px) {
+    @media screen and (min-width:1425px) {
         height: 56px;
     }
 
@@ -71,14 +72,14 @@
         height: 100px;
     }
 
-    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
 
         height: 208px;
     
         position: relative;
     }
 
-    @media screen and (min-width:1120px) {
+    @media screen and (min-width:1425px) {
         height: 208px;
         position: relative;
         align-content: flex-start;
@@ -99,14 +100,14 @@
         column-gap: 16px;
     }
 
-    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         flex-wrap: wrap;
         padding: 0 24px; 
         column-gap: 24px;
         align-content: flex-start;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         flex-wrap: wrap;
        padding: 0 32px;
         column-gap: 32px;
@@ -126,11 +127,11 @@
         width: 240px !important;
     }
 
-    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         width: 224px !important;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         width: 240px !important;
     }
 }
@@ -175,11 +176,11 @@
         width: 240px;
     }
 
-    @media screen and ((min-width:768px) and (max-width: 1119px)) {
+    @media screen and ((min-width:768px) and (max-width: 1424px)) {
         width: 224px;
     }
 
-    @media screen and (min-width:1120px) {
+    @media screen and (min-width:1425px) {
         width: 240px;
     }
 }

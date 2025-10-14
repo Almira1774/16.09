@@ -20,17 +20,20 @@
 
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1119px) {
+    @media screen and (min-width: 768px) and (max-width: 1424px) {
         overflow-x: scroll;
         max-width: 768px;
         padding-left: 24px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         flex-wrap: wrap;
         max-width: 1096px;
         padding-left: 33px;
+        margin-left: auto;
+        margin-right: 0;
+
     }
 }
 
@@ -60,11 +63,11 @@
         min-width: 233px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1119px) {
+    @media screen and (min-width: 768px) and (max-width: 1424px) {
         min-width: 211px;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         display: none;
     }
 }
@@ -78,11 +81,11 @@
         min-width: 246px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1119px) {
+    @media screen and (min-width: 768px) and (max-width: 1424px) {
         min-width: 248px;
     }
 
-    @media screen and (min-width:1120px) {
+    @media screen and (min-width:1425px) {
         min-width: 254px;
     }
 }
@@ -100,11 +103,11 @@
         min-width: 191px;
     }
 
-    @media (min-width: 768px) and (max-width: 1119px) {
+    @media (min-width: 768px) and (max-width: 1424px) {
         min-width: 172px;
     }
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1425px) {
         min-width: 180px;
     }
 }
@@ -112,7 +115,7 @@
 .menu__button--reviews {
     min-width: 95px;
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1425px) {
         padding-left: 15px;
     }
 }

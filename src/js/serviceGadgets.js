@@ -37,15 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const updateScreenValues = () => {
         const screen = window.innerWidth; // Обновляем значение screen
 
-        if (screen > 767 && screen < 1119) {
+        if (screen >= 767 && screen < 1425) {
             gadgetsSlidesCount = 3;
             heightToOpen = 384;
             heightToClose = 208;
-        } else if (screen > 1120) {
+        } else if (screen >= 1425) {
             gadgetsSlidesCount = 2;
             heightToOpen = 384;
             heightToClose = 208;
         }
+
+        gadgetsSlides.forEach(slide => {
+            slide.classList.remove('hidden');
+            slide.classList.remove('visible');
+        });
 
         // Обновляем видимость слайдов
         for (let i = gadgetsSlides.length - gadgetsSlidesCount; i < gadgetsSlides.length; i++) {

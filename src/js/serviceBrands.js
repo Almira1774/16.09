@@ -10,16 +10,20 @@ let heightToOpen, heightToClose;
 const updateScreenValues = () => {
     const screen = window.innerWidth; // Обновляем значение screen
 
-    if (screen > 767 && screen < 1119) {
+    if (screen >= 767 && screen < 1425) {
         SlidesCount = 5;
         heightToOpen = 384;
         heightToClose = 208;
-    } else if (screen > 1120) {
+    } else if (screen >= 1425) {
         SlidesCount = 3;
         heightToOpen = 286;
         heightToClose = 208;
     }
-
+  // Сначала убираем класс hidden у всех слайдов
+  slides.forEach(slide => {
+    slide.classList.remove('hidden');
+    slide.classList.remove('visible');
+});
     // Обновляем видимость слайдов при изменении размера окна
     for (let i = slides.length - SlidesCount; i < slides.length; i++) {
         slides[i].classList.add('hidden');

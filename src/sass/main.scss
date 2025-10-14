@@ -31,19 +31,22 @@ body {
     height: auto;
   
  }
- @media screen and (min-width: 768px) and (max-width: 1119px) {
+ @media screen and (min-width: 768px) and (max-width: 1424px) {
     height: auto;
 
 }
-@media screen and (min-width: 1120px) {
-    max-width: 1120px;
+@media screen and (min-width: 1425px) {
+    max-width: 1425px;
     height: auto;  
+    margin: 0;
 }
 }
 
 .about-us {
     @include title-border;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     @media screen and ((min-width: 320px) and (max-width: 767px)){
         padding-top: 16px;
         max-width: 320px;
@@ -51,7 +54,7 @@ body {
         text-align: center;
         row-gap: 16px;        
     }
-    @media screen and ((min-width: 768px) and (max-width: 1119px)){
+    @media screen and ((min-width: 768px) and (max-width: 1424px)){
         min-height: 81px;
         max-width: 768px;
         flex-direction: row;
@@ -59,11 +62,14 @@ body {
         justify-content: space-between;    
  }
 
- @media screen and (min-width: 1120px) {
+ @media screen and (min-width: 1425px) {
     padding: 32px 32px 0 32px;
     min-height: 65px;
     flex-direction: row;
     justify-content: space-between; 
+    max-width: 1120px;
+    margin-right: 0;
+    margin-left: auto;
     
  }
 }
@@ -77,7 +83,7 @@ body {
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         
     }
-    @media screen and ((min-width: 768px) and (max-width: 1119px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         min-width: 214px;
      max-width: 218px;
       padding-top: 32px;
@@ -88,10 +94,12 @@ body {
         text-align: right;
     } 
     }
-    @media screen and (min-width: 1120px)  {
+    @media screen and (min-width: 1425px)  {
         min-width: 214px;
      max-width: 333px;
       padding-top: 32px;
+      
+  
      &:first-child{
         text-align: left;
     }
