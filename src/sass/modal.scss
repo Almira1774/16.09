@@ -17,6 +17,7 @@ body{
       top: 0;
       left: 0;
       z-index: 5;
+      overflow-y: auto;
       
 
       @media  screen and (min-width: 320px) and (max-width: 359px) {
@@ -28,6 +29,10 @@ body{
       @media screen and (min-width: 360px) and (max-width: 767px) {
         width: 360px;
         height: 676px;
+        
+      }
+      @media screen and (min-width: 768px) and (max-width: 1119px) {
+        overflow-y: auto;
         
       }
 
