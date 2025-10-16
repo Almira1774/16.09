@@ -11,43 +11,63 @@ import './sass/modal.scss'
 
 const hello = require('./js/hello')
 
-/*function highlightElement(id) {
-    const element = document.getElementById(id);
-    if (element) {
-        element.classList.add('highlight'); // Добавляем класс подсветки
-        setTimeout(() => {
-            element.classList.remove('highlight'); // Убираем класс через 1 секунду
-        }, 1000); // Время в миллисекундах
-    }
-}
-
-// Слушаем событие перехода по якорной ссылке
-window.addEventListener('hashchange', () => {
-    const id = location.hash.substring(1); // Получаем id из URL
-    highlightElement(id); // Подсвечиваем элемент
-});
-
-// Если страница загружается с якорем, подсвечиваем сразу
-if (location.hash) {
-    highlightElement(location.hash.substring(1));
-}*/
+// Сначала объявляем все переменные
 const burgerClose = document.querySelector(".block-header__button--burger");
 const back = document.querySelector('.block');
 const burgerShows = document.querySelector('.header-buttons__button--burger');
 const overlay = document.querySelector('.overlay-hidden');
 
+// Функция для обновления значений в зависимости от ширины экрана
+
+
+// Функция для показа/скрытия модального окна
 const showUl = function() {
-    back.classList.toggle('not-visible'); 
+    const screen = window.innerWidth;
 
-    if (!back.classList.contains('not-visible')) {
-        overlay.classList.add('overlay');
-        overlay.classList.remove('overlay-hidden');
-    } else {
-        overlay.classList.add('overlay-hidden');
-        overlay.classList.remove('overlay');
+    if (screen <= 1425) {
+        back.classList.toggle('not-visible');
+
+        if (!back.classList.contains('not-visible')) {
+            overlay.classList.add('overlay');
+            overlay.classList.remove('overlay-hidden');
+            console.log(overlay.classList);
+            console.log(back.classList);
+        } else {
+            overlay.classList.add('overlay-hidden');
+            overlay.classList.remove('overlay');
+            console.log(overlay.classList);
+            console.log(back.classList);
+        }
     }
-}
+};
+const updateScreenValues = () => {
+    const screen = window.innerWidth;
 
+    if (screen > 1425) {
+        overlay.classList.remove('overlay');
+        overlay.classList.add('overlay-hidden'); // Убедись, что overlay имеет нужные стили
+        back.classList.remove('not-visible');
+        console.log(overlay.classList);
+        console.log(back.classList);
+    } else {
+        showUl();
+        console.log(overlay.classList);
+        console.log(back.classList);
+        
+    }
+};
+
+// Добавляем обработчики событий
 burgerClose.addEventListener('click', showUl);
 burgerShows.addEventListener('click', showUl);
+
+// Инициализация значений при загрузке страницы
+updateScreenValues();
+
+// Обработчик события resize
+window.addEventListener('resize', updateScreenValues);
+
+
+
+
 

@@ -39,6 +39,8 @@ body {
     max-width: 1425px;
     height: auto;  
     margin: 0;
+    display:flex;
+    flex-direction: column;
 }
 }
 
@@ -52,14 +54,18 @@ body {
         max-width: 320px;
         flex-direction: column;
         text-align: center;
-        row-gap: 16px;        
+        row-gap: 16px;      
+        
+    margin-bottom: 19px;  
     }
     @media screen and ((min-width: 768px) and (max-width: 1424px)){
         min-height: 81px;
         max-width: 768px;
         flex-direction: row;
         padding: 0 24px;
-        justify-content: space-between;    
+        justify-content: space-between;  
+        
+    margin-bottom: 25px;
  }
 
  @media screen and (min-width: 1425px) {
@@ -67,9 +73,9 @@ body {
     min-height: 65px;
     flex-direction: row;
     justify-content: space-between; 
-    max-width: 1120px;
+    width: 1120px;
+    margin-bottom: 21px;
     margin-right: 0;
-    margin-left: auto;
     
  }
 }
