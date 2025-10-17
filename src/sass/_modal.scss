@@ -74,7 +74,7 @@ body {
     border-width: 0;
 }
 
-.block-header__button--burger,
+.block-header__button--close,
 .block-header__button--search {
     background-position: center;
     background-size: 17.96px;
@@ -82,8 +82,8 @@ body {
 
 }
 
-.block-header__button--burger {
-    background-image: url("../assets/iconBurger.svg");
+.block-header__button--close {
+    background-image: url("../assets/icon--close.svg");
     transition: background-image 0.5s, transform 1.5s;
 
 

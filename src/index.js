@@ -14,7 +14,7 @@ const hello = require('./js/hello')
 
 
 // Сначала объявляем все переменные
-const burgerClose = document.querySelector(".block-header__button--burger");
+const burgerClose = document.querySelector(".block-header__button--close");
 const back = document.querySelector('.block');
 const burgerShows = document.querySelector('.header-buttons__button--burger');
 const overlay = document.querySelector('.overlay-hidden');
