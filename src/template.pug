@@ -7,12 +7,14 @@ html(lang="en")
     body
         block modal  
         include ./pug/modal.pug  
+        block call-backModal 
+        include ./pug/call-backModal.pug
         header.header
             div.header-buttons
                 button.header-buttons__button.header-buttons__button--burger(type="button")
                 div.header-buttons__divider-1
                 button.header-buttons__button.header-buttons__button--logo(type="button")
-                button.header-buttons__button.header-buttons__button--call(type="button")
+                button.header-buttons__button.header-buttons__button--call(onclick="callBack.showModal()" type="button")
                 button.header-buttons__button.header-buttons__button--chat(type="button")
                 button.header-buttons__button.header-buttons__button--profile(type="button")
                 div.header-buttons__divider-2

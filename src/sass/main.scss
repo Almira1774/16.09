@@ -1,12 +1,13 @@
 @use './variables' as *;
-@use './header' as *;
-@use './nav.scss' as *;
-@use './mainMenue.scss' as *;
+@use './_call-backModal' as *;
+@use './_header' as *;
+@use './_nav.scss' as *;
+@use './_mainMenue.scss' as *;
 @use '../css/swiper-bundle.min.css' as *;
 @use './serviceBrands.scss' as *;
 @use './serviceGadgets.scss' as *;
-@use './prices.scss' as *;
-@use './modal.scss' as *;
+@use './_prices.scss' as *;
+@use './_modal.scss' as *;
 
 /* Проверить все круги*/
 

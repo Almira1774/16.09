@@ -6,10 +6,12 @@ import './assets/logo1020.png'
 import './js/serviceBrands.js'
 import './js/serviceGadgets.js'
 import './js/prices.js'
-import './sass/modal.scss'
+import './sass/_modal.scss'
 
 
 const hello = require('./js/hello')
+
+
 
 // Сначала объявляем все переменные
 const burgerClose = document.querySelector(".block-header__button--burger");
@@ -21,7 +23,7 @@ const overlay = document.querySelector('.overlay-hidden');
 
 
 // Функция для показа/скрытия модального окна
-const showUl = function() {
+const showmodal = function() {
     const screen = window.innerWidth;
 
     if (screen <= 1425) {
@@ -40,7 +42,7 @@ const showUl = function() {
         }
     }
 };
-const updateScreenValues = () => {
+const updateScreen = () => {
     const screen = window.innerWidth;
 
     if (screen > 1425) {
@@ -50,7 +52,7 @@ const updateScreenValues = () => {
         console.log(overlay.classList);
         console.log(back.classList);
     } else {
-        showUl();
+       showmodal();
         console.log(overlay.classList);
         console.log(back.classList);
         
@@ -58,14 +60,16 @@ const updateScreenValues = () => {
 };
 
 // Добавляем обработчики событий
-burgerClose.addEventListener('click', showUl);
-burgerShows.addEventListener('click', showUl);
+burgerClose.addEventListener('click', showmodal);
+burgerShows.addEventListener('click', showmodal);
 
 // Инициализация значений при загрузке страницы
-updateScreenValues();
+updateScreen();
 
 // Обработчик события resize
-window.addEventListener('resize', updateScreenValues);
+window.addEventListener('resize', updateScreen);
+
+
 
 
 

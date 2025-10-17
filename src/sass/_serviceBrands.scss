@@ -1,22 +1,23 @@
-@use './variables.scss' as *;
+@use './_variables.scss' as *;
 @import '../css/swiper-bundle.min.css';
 
-.servicesGadgets {
+.servicesBrands {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     @include title-border;
-    background-color: $background-color;
+    overflow: hidden; /* Скрыть переполнение */
+    
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;  
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         width: 320px;
-        min-height: 284px;
+        min-height: 196px;
         margin-bottom: 24px;
     }
 
-    @media screen and ((min-width: 767px) and (max-width: 1424px)) {
+    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         align-content: flex-start;
         width: 768px;
         min-height: 288px;
@@ -25,14 +26,15 @@
 
     @media screen and (min-width: 1425px) {
         width: 1120px;
-        min-height: 288px;       
-        margin-bottom: 50px;
+        min-height: 288px;
+        margin-bottom: 50px;  
         margin-right: 0;
     }
 
-
-.servicesGadgets__title {
+/* линки поправить*/
+.servicesBrands__title {
     width: 100%;
+
     @include h2;
     padding: 16px 0 16px 24px;
     background-color: $header-color;
@@ -46,13 +48,20 @@
         margin-bottom: 16px;
     }
 
-    @media screen and (min-width:768px)  {
+    @media screen and ((min-width:767px) and (max-width: 1424px)) {
         height: 56px;
-    } 
+    }
+
+    @media screen and (min-width:1425px) {
+        height: 56px;
+    }
 
 }
 
-.swiper{
+
+
+.swiper {
+
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -60,26 +69,31 @@
 
     @media screen and ((min-width:320px) and (max-width: 767px)) {
         margin-left: 16px;
-        height: 204px;
+        height: 100px;
     }
 
     @media screen and ((min-width: 768px) and (max-width: 1424px)) {
 
         height: 208px;
+    
+        position: relative;
     }
 
     @media screen and (min-width:1425px) {
         height: 208px;
+        position: relative;
         align-content: flex-start;
     }
 
-}
+
 
 
 .swiper-wrapper {
     width: 100%;
     row-gap: 16px;
-    height: 100%;
+    max-height: 100%;
+   
+    
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         display: flex;
@@ -88,34 +102,26 @@
 
     @media screen and ((min-width: 768px) and (max-width: 1424px)) {
         flex-wrap: wrap;
-        padding: 0 24px;
-        
+        padding: 0 24px; 
         column-gap: 24px;
         align-content: flex-start;
-        
     }
 
     @media screen and (min-width: 1425px) {
         flex-wrap: wrap;
-        padding: 0 32px;
+       padding: 0 32px;
         column-gap: 32px;
         align-content: flex-start;
     }
 
 }
 
-
+}
 
 .swiper-slide {
     display: flex;
-    height: 160px;
+    height: 72px;
     box-sizing: border-box;
-    background-color: $header-color;
-    @include slidesBorder;
-    padding-left: 16px;
-    padding-top: 16px;    
-    position: relative;  
-
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         width: 240px !important;
@@ -140,45 +146,67 @@
             content: '';
             position: absolute;
             width: 24px;
-            height: 166px;
+            height: 81px;
+            background-image: linear-gradient(270deg, $background-color 16.84%, rgba(248, 248, 248, 0.0001) 100%);
             left: 30px;
-            bottom: 0px;
             opacity: 1;
         }
     }
 
+    @media screen and (min-width: 768px) {
+        &::before {
+            display: none;
+        }
+    }
 }
 
 
-}
-
-.link{
-    position: absolute;
-        bottom: 16px;
-        right: 16px;
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: $header-color url("../assets/dropdown.svg") no-repeat center center;
-        border: 2px solid $icon-color;
-        border-radius: 50%;
-}  
-
-.swiper-slide__notebook {
-   
+.slide-content {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $header-color;
+    height: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    border: $divider-color 1px solid;
+    border-radius: 6px;
 
     @media screen and ((min-width:320px) and (max-width: 767px)) {
-        
+        width: 240px;
+    }
+
+    @media screen and ((min-width:768px) and (max-width: 1424px)) {
+        width: 224px;
+    }
+
+    @media screen and (min-width:1425px) {
+        width: 240px;
+    }
+}
+
+}
+
+
+.slide-content__Lenovo {
+    background-image: url("../assets/lenovo.svg");
+    width: 108px;
+    height: 32px;
+
+    @media screen and ((min-width:320px) and (max-width: 767px)) {
+        margin-right: 84px;
     }
 
     @media screen and ((min-width: 768px)) {
-        
+        margin-right: 68px;
     }
 }
 
 
 
-.slide-content__tabs {
+.slide-content__Samsung {
+    background-image: url("../assets/samsung.svg");
+    background-repeat: no-repeat center;
     width: 116px;
     height: 38.4px;
 
@@ -192,7 +220,9 @@
 
 }
 
-.slide-content__pc {
+.slide-content__Apple {
+    background-image: url("../assets/apple.svg");
+    background-repeat: no-repeat;
     width: 44px;
     height: 44px;
 
@@ -206,7 +236,9 @@
 }
 
 
-.slide-content__monitors {
+.slide-content__ViewSonic {
+    background-image: url("../assets/ViewSonic.svg");
+    background-repeat: no-repeat;
     width: 128px;
     height: 21px;
 
@@ -220,7 +252,12 @@
     }
 }
 
-.swiper-slide__blocks {
+.slide-content__Bosh {
+    background-image: url("../assets/bosh.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 128px;
+    height: 28.6px;
     margin-right: 64px;
 
     @media screen and (min-width: 768px) {
@@ -230,7 +267,8 @@
 }
 
 
-.slide-content__components {
+.slide-content__HP {
+    background-image: url("../assets/hp.svg");
     background-repeat: no-repeat;
     width: 52px;
     height: 52px;
@@ -242,9 +280,52 @@
     }
 }
 
+.slide-content__Acer {
+    background-image: url("../assets/acer.svg");
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 24px;
 
+    @media screen and ((min-width: 320px) and (max-width: 767px)) {
+        margin-right: 98px;
+    }
 
+    @media screen and (min-width: 768px) {
+        margin-right: 82px;
+    }
+}
 
+.slide-content__Sony {
+    background-image: url("../assets/sony.svg");
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 25.6px;
+    margin-left: -2px;
+
+    @media screen and ((min-width: 320px) and (max-width: 767px)) {
+        margin-right: 66px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-right: 50px;
+    }
+}
+
+.slide-content__link {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: -20px;
+        right: -14px;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: $header-color url("../assets/dropdown.svg") no-repeat center center;
+        border: 2px solid $icon-color;
+        border-radius: 50%;
+    }
+}
 
 .swiper-pagination {
     height: 12px;
@@ -274,22 +355,21 @@
 }
 
 .hidden {
-    opacity: 0;
+   display: none;
 }
 
 .visible {
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+   display: inline;
 }
 
-.status-gadgets {
+.status {
     @media screen and (min-width: 768px) {
         display: flex;
         height: 24px;
         @include fontButtons;
         position: absolute;
         z-index: 1;
-        bottom: 0px;
+        bottom: 0;
         left: 24px;
         border: none;
         padding: 0;
@@ -298,27 +378,27 @@
     }
 }
 
-.status-gadgets--showAll {
+.status--showAll {
     @media screen and (min-width: 768px) {
         width: 134px;
     }
 }
 
-.status-gadgets--closeAll {
+.status--closeAll {
     @media screen and (min-width: 768px) {
         width: 88px;
     }
 }
 
-.status-gadgets__icon {
+.status__icon {
     width: 24px;
     height: 24px;
 }
 
-.status-gadgets__icon--Show {
+.status__icon--Show {
     background: url("../assets/iconShow.png") no-repeat center;
 }
 
-.status-gadgets__icon--Hide {
+.status__icon--Hide {
     background: url("../assets/iconClose.png") no-repeat center;
 }

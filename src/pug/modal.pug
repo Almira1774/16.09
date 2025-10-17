@@ -27,7 +27,7 @@ block modal
         footer.block-footer
           div.block-footer__contacts
             div.contacts__btn-container
-              button.contacts__btn.contacts__btn--call
+              button(onclick="callBack.show()").contacts__btn.contacts__btn--call
               button.contacts__btn.contacts__btn--chat
               button.contacts__btn.contacts__btn--profile
             a(href="mailto:mail@cps.com").block-footer__mail mail@cps.com
