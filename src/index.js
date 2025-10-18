@@ -27,7 +27,7 @@ const showmodal = function() {
     const screen = window.innerWidth;
 
     if (screen <= 1425) {
-        back.classList.toggle('not-visible');
+        
 
         if (!back.classList.contains('not-visible')) {
             overlay.classList.add('overlay');

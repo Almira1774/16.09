@@ -7,15 +7,17 @@ html(lang="en")
     body
         block modal  
         include ./pug/modal.pug  
-        block call-backModal 
-        include ./pug/call-backModal.pug
+        block modal-feedBack 
+        include ./pug/modal-feedBack.pug
+        block modal-callBack 
+        include ./pug/modal-callBack.pug
         header.header
             div.header-buttons
                 button.header-buttons__button.header-buttons__button--burger(type="button")
                 div.header-buttons__divider-1
                 button.header-buttons__button.header-buttons__button--logo(type="button")
                 button.header-buttons__button.header-buttons__button--call(onclick="callBack.showModal()" type="button")
-                button.header-buttons__button.header-buttons__button--chat(type="button")
+                button.header-buttons__button.header-buttons__button--chat(onclick="feedBack.showModal()" type="button")
                 button.header-buttons__button.header-buttons__button--profile(type="button")
                 div.header-buttons__divider-2
                 div.header-buttons__repair-container
@@ -61,10 +63,10 @@ html(lang="en")
               span Читать далее       
             div.main__logo-container 
           picture
-            source(media="(min-width:320px) and (max-width: 767px)" srcset="../assets/logo320.png" alt="Логотип и часы работы")
-            source(media="(min-width: 768px) and (max-width: 1424px)" srcset="../assets/logo768.png" alt="Логотип и часы работы")
+            source(media="(min-width:320px) and (max-width: 767px)" srcset="./assets/logo320.png" alt="Логотип и часы работы")
+            source(media="(min-width: 768px) and (max-width: 1424px)" srcset="./assets/logo768.png" alt="Логотип и часы работы")
             source(media="(min-width: 1425px)" srcset="./assets/logo1020.png" alt="Логотип и часы работы")
-            img.main__logo(src="../assets/logo.png" alt="Логотип и часы работы")
+            //*img.main__logo(src="./assets/logo.png" alt="Логотип и часы работы")*/
         block content    
         include ./pug/serviceBrands.pug
         block gadgets

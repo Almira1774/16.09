@@ -1,87 +1,57 @@
 @use './_variables.scss' as *;
 @use './_header.scss' as *;
 
-body{
+body {
     position: relative;
 }
 
-.class {
+.modal-feedBack {
     margin-right: 0;
     margin-top: 0;
-    border: none;          
+    border: none;
     z-index: 20;
-    padding: 24px 16px 0 0;   
+    padding: 24px 16px 0 0;
+    position: relative;
+    left: 0;
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
         width: 320px;
         height: 676px;
         overflow: scroll;
         padding-top: 104px;
-        
-        
-    outline: 9999px solid rgba(255, 255, 255, 0.8);
+        outline: 9999px solid rgba(255, 255, 255, 0.8);
+        margin-left: auto;
     }
 
     @media screen and (min-width: 768px) {
         width: 513px;
-        height: 100%;     
+        height: 100%;
         padding-top: 33.08px;
         padding-right: 29px;
         height: 100%;
         overflow: scroll;
-        margin-bottom: auto;
         padding-left: 73px;
         padding-top: 24px;
-        
-    outline: 9999px solid rgba(255, 255, 255, 0.95);
+        outline: 9999px solid rgba(255, 255, 255, 0.95);
+
         &::before {
-            content: ''; /* Обязательно указываем content для псевдоэлемента */
-            position: absolute; /* Позиционируем псевдоэлемент */
-            
+            content: '';
+            position: absolute;
             top: 0;
-            left:73px;
+            left: 73px;
             right: 0;
             bottom: 0;
             box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-             -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-
-             /* Если нужно, добавь скругление */
-            z-index: 2; /* Убедись, что тень под основным элементом */
-            
+                -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+            z-index: -1;
         }
     }
 
-   
+
 }
 
 
-/*.call-back__overlay{
-    
-    z-index: 19;
-    @media screen and (min-width:1425px) {
-        
-    
-        display: block;
-        min-width: 1425px;
-        height: 100%;
-        background-color: white;
-        position: fixed;
-        opacity: 0.9;
-        right: 0;
-        top: 0;
-    }
-    }*/
-    
-    
-
-
-.call-back__overlay--hidden {
-    display: none;
-}
-    
-    
-
-.button-container__button {
+.modal-feedBack__buttonClose {
     background-color: #FF3E79;
     width: 40px;
     height: 40px;
@@ -95,12 +65,12 @@ body{
     position: absolute;
     z-index: 21;
     margin-left: 16px;
-    top:24px;
-    @media  screen and (min-width: 768px) {
+    top: 24px;
+
+    @media screen and (min-width: 768px) {
         left: -14px;
-        
+
     }
-    
 
 
 }
@@ -112,20 +82,18 @@ body{
     height: 40px;
     margin: 0;
 
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        
-    }
+    @media screen and (min-width: 320px) and (max-width: 767px) {}
 
     @media screen and (min-width:768px) and (max-width: 1424px) {
         width: 281px;
-        
-       
+
+
     }
 
     @media screen and (min-width:1425px) {
         margin-right: auto;
         width: 100%;
-       
+
     }
 }
 
@@ -140,32 +108,34 @@ body{
 .h5-container__text {
     width: 100%;
     height: 40px;
-    margin:0;
+    margin: 0;
     @include h1;
-    
+
 
     @media screen and (min-width:320px) and (max-width: 1424px) {
         padding-left: 12px;
     }
 
-    
+
     @media screen and (min-width:1425px) {
         padding-left: 30px;
     }
 }
 
-.call-back__form{
+.feedBack-form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 24px 16px 0 16px;    
+    padding: 24px 16px 0 16px;
     align-content: start;
+
     @media screen and (min-width: 1425px) {
-        padding: 24px 16px 0 32px;  
-        
+        padding: 24px 16px 0 32px;
+
     }
 }
-.form-item{
+
+.feedBack-form__item {
     display: flex;
     @include fontButtons;
     color: $font-gray;
@@ -174,20 +144,22 @@ body{
     border-radius: 8px;
     border: 1px solid $divider-color;
     margin-bottom: 16px;
-    padding-left: 16px;    
+    padding-left: 16px;
     align-content: start;
-    &:last-of-type{
-        min-height: 118px;
-    }
+
     @media screen and (min-width: 1425px) {
-        width: 376px;  
-        
+        width: 376px;
+
     }
 }
 
-.form__text{
+.feedBack-form__item--textarea {
+    height: 118px;
+}
+
+.text-item {
     max-width: 288px;
-    min-height:64px;
+    min-height: 64px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0;
@@ -195,22 +167,24 @@ body{
     margin-bottom: 19px;
 
     @media screen and (min-width: 1425px) {
-        max-width: 376px;  
-        
+        max-width: 376px;
+
     }
 }
-.text-item__a{
+
+.text-item--link {
     color: $icon-color;
     text-decoration: none;
 }
 
-.button-send{
+.button-send {
     display: flex;
     max-width: 100%;
-   justify-content: end;
+    justify-content: end;
 
 }
-.button-send__item{
+
+.button-send__item {
     @include btnOrder;
     padding: 4px 0px 4px 12px;
     background-image: url('../assets/goside.png');

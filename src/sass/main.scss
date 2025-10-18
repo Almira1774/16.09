@@ -1,5 +1,7 @@
 @use './variables' as *;
-@use './_call-backModal' as *;
+@use './_modal.scss' as *;
+@use './_modal-feedBack' as *;
+@use './_modal-callBack' as *;
 @use './_header' as *;
 @use './_nav.scss' as *;
 @use './_mainMenue.scss' as *;
@@ -7,7 +9,6 @@
 @use './serviceBrands.scss' as *;
 @use './serviceGadgets.scss' as *;
 @use './_prices.scss' as *;
-@use './_modal.scss' as *;
 
 /* Проверить все круги*/
 

@@ -1,0 +1,15 @@
+block modal-callBack
+
+    dialog(id="callBack").modal-callBack        
+      button(onclick="callBack.close()" type="button").modal-callBack__buttonClose  
+      div.h6-container  
+        div.h5-container__img 
+        div.h6-container__text Обратный звонок 
+      form(action=" " method = 'post').callBack-form
+        input(name="phoneInput" type="text" placeholder="Телефон" id="phone" required).callBack-form__item
+        span.item-text Нажимая “отправить”, вы даете согласие на 
+          a(href=" ").item-text--link обработку персональных данных 
+          span.item-text и соглашаетесь с нашей 
+            a(href=" ").item-text--link политикой конфиденциальности
+        div.send-button
+          input(type="submit").send-button__item        
