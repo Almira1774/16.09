@@ -92,11 +92,11 @@
     width: 100%;
     row-gap: 16px;
     max-height: 100%;
-   
+    display: flex;
     
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        display: flex;
+       
         column-gap: 16px;
     }
 

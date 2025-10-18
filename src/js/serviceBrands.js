@@ -1,5 +1,31 @@
 import Swiper from 'swiper/bundle';
 import '../js/swiper-bundle.min.js'; 
+document.addEventListener("DOMContentLoaded", function () {   
+    const gadgetsSwiper = new Swiper(".brands-swiper", {
+        slidesPerView: 1.2,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            slideShadows: true,
+            modifier: 0,
+        },
+        on: {
+            init: function () {
+                document
+                    .querySelectorAll(".gadgets-swiper.swiper-slide-active .swiper-slide")
+                    .forEach((el) => {
+                        el.style.opacity = "1";
+                        el.style.transform = "translateY(0)";
+                    });
+            },
+        },
+    });
 
 const button = document.querySelector('.status');
 const icon = button.querySelector('.status__icon');
@@ -7,7 +33,7 @@ const slides = document.querySelectorAll('.brands-swiper .swiper-slide');
 let SlidesCount = 0;
 let heightToOpen, heightToClose;
 
-const updateScreenValues = () => {
+const updateScreen = () => {
     const screen = window.innerWidth; // Обновляем значение screen
 
     if (screen >= 767 && screen < 1425) {
@@ -32,10 +58,10 @@ const updateScreenValues = () => {
 };
 
 // Инициализация значений при загрузке страницы
-updateScreenValues();
+updateScreen();
 
 // Обработчик события resize
-window.addEventListener('resize', updateScreenValues);
+window.addEventListener('resize', updateScreen);
 
 const toggleSlides = function (count) {
     const totalSlides = slides.length;
@@ -51,7 +77,32 @@ const toggleSlides = function (count) {
         }
     }
 };
+const IconChange = function () {
+    const ButtonToOpen = button.classList.contains('status--showAll');
+    const ButtonToClose = button.classList.contains('status--closeAll');
+    
+    const navHeight = document.querySelector('.brands-swiper');
+    const textNode = button.querySelector('.status__icon + span');
 
+    if (ButtonToOpen) {
+        button.classList.remove('status--showAll');
+        button.classList.add('status--closeAll');
+        textNode.textContent = 'Скрыть';
+        icon.classList.remove('status__icon--Show');
+        icon.classList.add('status__icon--Hide');
+        navHeight.style.height = heightToOpen + 'px';
+        toggleSlides(SlidesCount);
+    } else if (ButtonToClose) {
+        button.classList.remove('status--closeAll');
+        button.classList.add('status--showAll');
+        icon.classList.remove('status__icon--Hide');
+        icon.classList.add('status__icon--Show');
+        textNode.textContent = 'Показать все';
+        navHeight.style.height = heightToClose + 'px';
+        toggleSlides(SlidesCount);
+    }
+};
+button.addEventListener('click', IconChange);
 
-
+});
 
