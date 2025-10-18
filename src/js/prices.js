@@ -3,7 +3,7 @@ import '../js/swiper-bundle.min.js';
 
 document.addEventListener("DOMContentLoaded", function () {   
     const gadgetsSwiper = new Swiper(".prices__swiper", {
-        slidesPerView: 1.2,
+        slidesPerView: 1.09,
         slidesPerGroup: 1,
         centeredSlides: false,
         loop: true,

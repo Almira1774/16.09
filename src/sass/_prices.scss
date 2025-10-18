@@ -94,13 +94,11 @@
             margin-bottom: 16px;
         }
 
-        @media screen and ((min-width: 768px) and (max-width: 1424px)) {
+        @media screen and (min-width: 768px)  {
             height: 356px;
         }
 
-        @media screen and (min-width: 1425px) {
-            height: 356px;
-        }
+       
     }
 
 
