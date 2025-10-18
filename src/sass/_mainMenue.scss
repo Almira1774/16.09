@@ -5,7 +5,6 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    
     height: auto;
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -36,7 +35,6 @@
 .main__text--orientation-768 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         display: none;
-
     }
 }
 
@@ -53,16 +51,16 @@
 .main__text {
     @include mainText;
     height: auto;
-    p{
+
+    p {
         margin-top: 0;
-       
+
     }
-    
-    /*кружки подправить*/
+
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
         max-width: 288px;
-       
+
     }
 
     @media screen and (min-width: 768px) and (max-width: 1424px) {
@@ -72,9 +70,8 @@
     }
 
     @media screen and (min-width: 1425px) {
-       
         max-width: 490px;
-    }    
+    }
 }
 
 
@@ -82,8 +79,8 @@
     display: flex;
     border-width: 0;
     width: 140px;
-    height: 24px; 
-    @include link-text;    
+    height: 24px;
+    @include link-text;
 }
 
 .main__read-more--img {
@@ -96,23 +93,23 @@
 
 
 .main__logo-container {
-@media screen and (min-width: 320px) and (max-width:767px) {
+    @media screen and (min-width: 320px) and (max-width:767px) {
         margin-top: 16px;
         max-width: 320px;
         height: auto;
     }
 
 
-@media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1424px) {
         max-width: 360px;
         height: auto;
     }
 
 
-@media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1425px) {
         max-width: 531.35px;
-        height: auto;    
-}
+        height: auto;
+    }
 }
 
 .main__logo {

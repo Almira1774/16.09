@@ -6,10 +6,9 @@
     flex-wrap: wrap;
     justify-content: center;
     @include title-border;
-    overflow: hidden; /* Скрыть переполнение */
-    
+    overflow: hidden;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
         width: 320px;
@@ -27,163 +26,158 @@
     @media screen and (min-width: 1425px) {
         width: 1120px;
         min-height: 288px;
-        margin-bottom: 50px;  
+        margin-bottom: 50px;
         margin-right: 0;
     }
 
-/* линки поправить*/
-.servicesBrands__title {
-    width: 100%;
 
-    @include h2;
-    padding: 16px 0 16px 24px;
-    background-color: $header-color;
-    @include titleGradient;
-    margin-bottom: 24px;
-    margin-top: 0;
+    .servicesBrands__title {
+        width: 100%;
+        @include h2;
+        padding: 16px 0 16px 24px;
+        background-color: $header-color;
+        @include titleGradient;
+        margin-bottom: 24px;
+        margin-top: 0;
 
-    @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        height: 80px;
-        padding: 16px;
-        margin-bottom: 16px;
-    }
+        @media screen and ((min-width: 320px) and (max-width: 767px)) {
+            height: 80px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
 
-    @media screen and ((min-width:767px) and (max-width: 1424px)) {
-        height: 56px;
-    }
+        @media screen and ((min-width:767px) and (max-width: 1424px)) {
+            height: 56px;
+        }
 
-    @media screen and (min-width:1425px) {
-        height: 56px;
-    }
+        @media screen and (min-width:1425px) {
+            height: 56px;
+        }
 
-}
-
-
-
-.swiper {
-
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    background-color: $background-color;
-
-    @media screen and ((min-width:320px) and (max-width: 767px)) {
-        margin-left: 16px;
-        height: 100px;
-    }
-
-    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
-
-        height: 208px;
-    
-        position: relative;
-    }
-
-    @media screen and (min-width:1425px) {
-        height: 208px;
-        position: relative;
-        align-content: flex-start;
     }
 
 
 
+    .swiper {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        background-color: $background-color;
 
-.swiper-wrapper {
-    width: 100%;
-    row-gap: 16px;
-    max-height: 100%;
-    display: flex;
-    
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            margin-left: 16px;
+            height: 100px;
+        }
 
-    @media screen and ((min-width: 320px) and (max-width: 767px)) {
-       
-        column-gap: 16px;
+        @media screen and ((min-width: 768px) and (max-width: 1424px)) {
+            height: 208px;
+            position: relative;
+        }
+
+        @media screen and (min-width:1425px) {
+            height: 208px;
+            position: relative;
+            align-content: flex-start;
+        }
+
+
+
+
+        .swiper-wrapper {
+            width: 100%;
+            row-gap: 16px;
+            max-height: 100%;
+            display: flex;
+
+
+            @media screen and ((min-width: 320px) and (max-width: 767px)) {
+                column-gap: 16px;
+            }
+
+            @media screen and ((min-width: 768px) and (max-width: 1424px)) {
+                flex-wrap: wrap;
+                padding: 0 24px;
+                column-gap: 24px;
+                align-content: flex-start;
+            }
+
+            @media screen and (min-width: 1425px) {
+                flex-wrap: wrap;
+                padding: 0 32px;
+                column-gap: 32px;
+                align-content: flex-start;
+            }
+
+        }
+
     }
 
-    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
-        flex-wrap: wrap;
-        padding: 0 24px; 
-        column-gap: 24px;
-        align-content: flex-start;
-    }
+    .swiper-slide {
+        display: flex;
+        height: 72px;
+        box-sizing: border-box;
 
-    @media screen and (min-width: 1425px) {
-        flex-wrap: wrap;
-       padding: 0 32px;
-        column-gap: 32px;
-        align-content: flex-start;
-    }
+        @media screen and ((min-width: 320px) and (max-width: 767px)) {
+            width: 240px !important;
+        }
 
-}
+        @media screen and ((min-width: 768px) and (max-width: 1424px)) {
+            width: 224px !important;
+        }
 
-}
-
-.swiper-slide {
-    display: flex;
-    height: 72px;
-    box-sizing: border-box;
-
-    @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        width: 240px !important;
-    }
-
-    @media screen and ((min-width: 768px) and (max-width: 1424px)) {
-        width: 224px !important;
-    }
-
-    @media screen and (min-width: 1425px) {
-        width: 240px !important;
-    }
-}
-
-
-.swiper-slide-next {
-
-    @media screen and ((min-width:320px) and (max-width: 767px)) {
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 81px;
-            background-image: linear-gradient(270deg, $background-color 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-            left: 30px;
-            opacity: 1;
+        @media screen and (min-width: 1425px) {
+            width: 240px !important;
         }
     }
 
-    @media screen and (min-width: 768px) {
-        &::before {
-            display: none;
+
+    .swiper-slide-next {
+
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 81px;
+                background-image: linear-gradient(270deg, $background-color 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+                left: 30px;
+                opacity: 1;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            &::before {
+                display: none;
+            }
         }
     }
-}
 
 
-.slide-content {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: $header-color;
-    height: 72px;
-    padding-left: 16px;
-    padding-right: 16px;
-    align-items: center;
-    border: $divider-color 1px solid;
-    border-radius: 6px;
+    .slide-content {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: $header-color;
+        height: 72px;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+        border: $divider-color 1px solid;
+        border-radius: 6px;
 
-    @media screen and ((min-width:320px) and (max-width: 767px)) {
-        width: 240px;
+        @media screen and ((min-width:320px) and (max-width: 767px)) {
+            width: 240px;
+        }
+
+        @media screen and ((min-width:768px) and (max-width: 1424px)) {
+            width: 224px;
+        }
+
+        @media screen and (min-width:1425px) {
+            width: 240px;
+        }
     }
-
-    @media screen and ((min-width:768px) and (max-width: 1424px)) {
-        width: 224px;
-    }
-
-    @media screen and (min-width:1425px) {
-        width: 240px;
-    }
-}
 
 }
 
@@ -355,11 +349,11 @@
 }
 
 .hidden {
-   display: none;
+    display: none;
 }
 
 .visible {
-   display: inline;
+    display: inline;
 }
 
 .status {
