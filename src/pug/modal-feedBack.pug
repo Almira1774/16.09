@@ -6,9 +6,9 @@ block modal-feedBack
             div.h5-container__img 
             div.h5-container__text Обратная связь 
           form(action=" " method = 'post').feedBack-form
-            input(name="nameInput" type="text" placeholder="Имя" id="name" required).feedBack-form__item
-            input(name="phoneInput" type="text" placeholder="Телефон" id="phone" required).feedBack-form__item
-            input(name="postInput" type="text" placeholder="Электронная почта" id="post" required).feedBack-form__item
+            input(name="nameInput" type="text" placeholder="Имя"  id="name" required).feedBack-form__item
+            input(name="phoneInput" type="tel" pattern="2-[0-9]{3}-[0-9]{3}" placeholder="Телефон" id="phone" required).feedBack-form__item
+            input(name="emailInput" type="email" pattern="^\S+@\S+\.\S+$" placeholder="Электронная почта" id="post" required).feedBack-form__item
             textarea(name="messageInput"  maxlength="100" minlength="5" placeholder="Сообщение" id="message" required).feedBack-form__item.feedBack-form__item--textarea
             span.text-item Нажимая “отправить”, вы даете согласие на 
               a(href=" ").text-item--link обработку персональных данных 
