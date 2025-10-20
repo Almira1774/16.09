@@ -28,11 +28,18 @@
        
     }
 
-    @media screen and (min-width: 1360px) {
+    @media screen and (min-width: 1360px) and (max-width:1424px){
         flex-wrap: wrap;
         max-width: 1096px;
         padding-left: 33px;
-        margin-left: auto;
+        margin-left: 260px;
+        margin-right: 0;
+    }
+    @media screen and (min-width: 1425px) {
+        flex-wrap: wrap;
+        max-width: 1096px;
+        padding-left: 33px;
+        margin-left: 305px;
         margin-right: 0;
     }
 }
