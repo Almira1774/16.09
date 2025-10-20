@@ -51,6 +51,7 @@ $font-white: #FFFFFF;
 }
 
 @mixin fontButtons {
+    font-family: $font-primary;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -84,6 +85,7 @@ $font-white: #FFFFFF;
     height: $btn-order-height;
     border-radius: $btn-order-radius;
     background-color: $icon-color;
+    font-family: $font-primary;
     color: $font-white;
     font-size: $font-superSmall;
     font-weight: 700;

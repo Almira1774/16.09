@@ -83,21 +83,24 @@
 }
 
 
-.main__read-more {
+.read-more {
     display: flex;
     border-width: 0;
     width: 140px;
     height: 24px;
-    @include link-text;
+    background-color: $background-color;
 }
 
-.main__read-more--img {
+.read-more__img {
     background: url("../assets/expand.svg") center no-repeat;
     background-size: cover;
     width: 24px;
     height: 24px;
 }
+.read-more__text{
+    @include fontButtons;
 
+}
 
 
 .main__logo-container {
