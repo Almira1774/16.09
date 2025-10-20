@@ -13,17 +13,17 @@
         margin-bottom: 24px;
     }
 
-    @media screen and (min-width:768px) and (max-width: 1424px) {
+    @media screen and (min-width:768px) and (max-width: 1359px) {
         flex-wrap: wrap;
         width: 768px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         flex-direction: row-reverse;
         align-items: center;
         margin-top: 42px;
-        width: 1120px;
+        width: 1096px;
         height: 48px;
         margin-bottom: 16.22px;
         margin-left: auto;
@@ -48,7 +48,7 @@
         margin-bottom: 24px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
         justify-content: space-between;
         column-gap: 24px;
         height: 88px;
@@ -56,7 +56,7 @@
         margin-bottom: 24px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         column-gap: 33px;
         border: none;
     }
@@ -78,11 +78,11 @@
     background-image: url("../assets/iconBurger.svg");
     background-size: 18px 16px;
 
-    @media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
         margin-left: 24px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         display: none;
     }
 }
@@ -96,7 +96,7 @@
     background-image: url("../assets/iconLogo.svg");
     background-color: $header-color;
 
-    @media screen and (min-width:1425px) {
+    @media screen and (min-width:1360px) {
         display: none;
 
     }
@@ -108,12 +108,12 @@
         display: none;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
         background-image: url("../assets/iconCall.svg");
         background-size: 17.96px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         display: none;
     }
 }
@@ -126,7 +126,7 @@
         display: none;
     }
 
-    @media screen and (min-width:1425px) {
+    @media screen and (min-width:1360px) {
         display: none;
     }
 }
@@ -140,7 +140,7 @@
         display: none;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         display: none;
     }
 }
@@ -156,11 +156,11 @@
         display: none;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
         display: none;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         .header-buttons__button-label {
             display: contents;
             font: 500 16px/24px 'TTLakes';
@@ -175,11 +175,11 @@
     background-image: url("../assets/iconCheckStatus.svg");
     background-size: 16px 20px;
 
-    @media screen and (min-width: 767px) and (max-width: 1424px) {
+    @media screen and (min-width: 767px) and (max-width: 1359px) {
         margin-right: 24px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) {
         display: flex;
         column-gap: 9px;
         align-items: center;
@@ -201,7 +201,7 @@
     }
 }
 
-@media (min-width: 1425px) {
+@media (min-width: 1360px) {
 
     .header-buttons__divider-1,
     .header-buttons__divider-2 {
@@ -210,7 +210,7 @@
 }
 
 
-@media screen and (min-width:1425px) {
+@media screen and (min-width:1360px) {
     .header-buttons__repair-container {
         display: flex;
         margin-left: auto;
@@ -219,7 +219,7 @@
     }
 }
 
-@media screen and (min-width:1425px) {
+@media screen and (min-width:1360px) {
     .header-buttons__status-container {
         display: flex;
         align-items: center;
@@ -249,7 +249,7 @@
         }
     }
 
-    @media screen and (min-width:768px) and (max-width: 1424px) {
+    @media screen and (min-width:768px) and (max-width: 1359px) {
         width: 281px;
         &::before {
             content: '';
@@ -264,7 +264,7 @@
 
     }
 
-    @media screen and (min-width:1425px) {
+    @media screen and (min-width:1360px) {
         margin-right: auto;
         width: 100%;
 
@@ -290,11 +290,11 @@
         padding-left: 16px;
     }
 
-    @media screen and (min-width:768px) and (max-width: 1424px) {
+    @media screen and (min-width:768px) and (max-width: 1359px) {
         padding-left: 24px;
     }
 
-    @media screen and (min-width:1425px) {
+    @media screen and (min-width:1360px) {
         padding-left: 33px;
     }
 }

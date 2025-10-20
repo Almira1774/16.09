@@ -21,7 +21,7 @@ const overlay = document.querySelector('.overlay');
 
 const modalVisibility = function(){
     const screen = window.innerWidth;
-    if (screen >=1425){
+    if (screen >=1360){
         
         back.classList.remove('not-visible')
     console.log(back.classList)

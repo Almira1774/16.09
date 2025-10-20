@@ -36,11 +36,11 @@ let heightToOpen, heightToClose;
 const updateScreen = () => {
     const screen = window.innerWidth; // Обновляем значение screen
 
-    if (screen >= 767 && screen < 1425) {
+    if (screen >= 767 && screen < 1359) {
         SlidesCount = 5;
         heightToOpen = 384;
         heightToClose = 208;
-    } else if (screen >= 1425) {
+    } else if (screen >= 1360) {
         SlidesCount = 3;
         heightToOpen = 286;
         heightToClose = 208;

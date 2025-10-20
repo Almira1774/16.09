@@ -28,18 +28,26 @@ body {
         width: 360px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1424px) {
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
         width: 305px;
     }
 
-    @media screen and (min-width: 1425px) {
+    @media screen and (min-width: 1360px) and (max-width:1424px) {
+    max-width: 260px;
         display: flex;
         flex-direction: column;
         box-shadow: none;
-        padding-top: 33.08px;
-        padding-right: 29px;
         height: 100%;
     }
+    @media screen and (min-width: 1425px) {
+        
+        max-width: 305px;
+           display: flex;
+           flex-direction: column;
+           box-shadow: none;
+           height: 100%;
+           margin-right: 29px;
+       }
 }
 
 
@@ -73,6 +81,10 @@ body {
 .block-header__button--close {
     background-image: url("../assets/icon--close.svg");
     transition: background-image 0.5s, transform 1.5s;
+    @media  screen and (min-width: 1360px) {
+        display: none;
+        
+    }
 }
 
 .block-header__button--burger:hover {
@@ -104,7 +116,7 @@ body {
     width: 98px;
     height: 52px;
     margin-right: auto;
-    margin-left: 16.73px;
+    margin-left: 0;
     background-image: url("../assets/iconLogo.svg");
     border: none;
     background-color: $header-color;
