@@ -25,10 +25,9 @@ body {
 
     @media screen and (min-width: 768px) {
         width: 513px;
-        height: 100%;
         padding-top: 33.08px;
         padding-right: 29px;
-        height: 100%;
+        height: 940px;
         overflow: scroll;
         padding-left: 73px;
         padding-top: 24px;
@@ -65,7 +64,6 @@ body {
     transition: background-image 0.5s, transform 1.5s;
     position: absolute;
     z-index: 22;
-    margin-left: 16px;
     top: 24px;
 
     @media screen and (min-width: 768px) {
