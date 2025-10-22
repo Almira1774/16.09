@@ -49,6 +49,8 @@
     border-bottom: 1px solid $border-color;
     width: 100%;
     @include fontButtons;
+    
+    position: relative;
 
     @media screen and (min-width: 320px) and (max-width:767px) {
         justify-content: space-evenly;

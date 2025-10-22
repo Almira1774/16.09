@@ -1,11 +1,6 @@
 @use './_variables.scss' as *;
 @use './_header.scss' as *;
 
-body {
-    position: relative;
-
-}
-
 
 .block {
     width: 320px;
@@ -13,7 +8,7 @@ body {
     background-color: $header-color;
     box-shadow: 16px 0px 52px 0 rgba(14, 24, 80, 0.2),
         -2px 0px 4px 0 rgba(69, 79, 126, 0.02);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
@@ -22,6 +17,7 @@ body {
 
     @media screen and (min-width: 320px) and (max-width: 359px) {
         width: 320px;
+        
     }
 
     @media screen and (min-width: 360px) and (max-width: 767px) {
@@ -38,7 +34,8 @@ body {
         display: flex;
         flex-direction: column;
         box-shadow: none;
-        height: 920px;
+        height: 920px;       
+        top: -42px;
     }
     @media screen and (min-width: 1425px) {
         
@@ -47,6 +44,7 @@ body {
            flex-direction: column;
            box-shadow: none;
            height: 920px;
+           top: -42px;
        }
 }
 
@@ -58,9 +56,26 @@ body {
 
 .block-header {
     width: 100%;
-    padding: 32px 29px 0 22px;
+    padding: 0 29px 0 22px;
     display: flex;
     align-items: center;
+    @media screen and (min-width:320px) and (max-width: 359px) {
+        padding-top: 18px;
+        
+    }
+    @media screen and (min-width:360px) and (max-width: 767px) {
+        padding-top: 16px;
+        
+    }
+    @media screen and (min-width:768px) and (max-width: 1359px) {
+        padding-top: 18px;
+        
+    }
+    @media screen and (min-width: 1360px){
+        padding-top: 30px;
+    }
+
+    
 }
 
 .block-header__button {
