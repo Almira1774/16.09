@@ -50,11 +50,71 @@ burgerClose.addEventListener('click',function(){
 
 window.addEventListener('resize', modalVisibility);
 
+const mainMenue = document.querySelector('.main')
+const readMore = mainMenue.querySelector('.read-more')
+const readMore_close = mainMenue.querySelector('.close')
+const show768 = mainMenue.querySelector('.main__text--orientation-768')
+const show1360 = mainMenue.querySelector('.main__text--orientation-1360')
+const showLorem = mainMenue.querySelector('.main__text--lorem-ipsum')
 
 
 
 
+readMore.addEventListener('click', function(){
 
+const changeButtonStyle = function(){
+    readMore.style.display = 'none'
+    readMore_close.style.display = 'flex'
+    
+
+}
+const screen = window.innerWidth
+if(screen >= 320 && screen < 767){
+    show768.style.display = "inline"
+    show1360.style.display = "inline"
+    showLorem.style.display = "inline"
+    changeButtonStyle();
+    
+}
+if(screen >= 768 && screen <= 1359){
+    show1360.style.display = "inline"
+    showLorem.style.display = "inline"
+    changeButtonStyle();
+}
+else if(screen >=1360 ){
+    showLorem.style.display = "inline"
+    changeButtonStyle();
+}
+
+
+}
+)
+
+readMore_close.addEventListener('click', function(){
+    const changeButtons = function(){
+        readMore_close.style.display = "none"
+        readMore.style.display = "flex"
+        
+    
+    }
+    const screen = window.innerWidth
+    if(screen >= 320 && screen < 767){
+        show768.style.display = "none"
+        show1360.style.display = "none"
+        showLorem.style.display = "none"
+        changeButtons();
+    }
+    if(screen >= 768 && screen <= 1359){
+        show1360.style.display = "none"
+        showLorem.style.display = "none"
+        changeButtons();
+    }
+    else if(screen >=1360 ){
+        showLorem.style.display = "none"
+        changeButtons();
+    }
+    
+})
 
 
 })

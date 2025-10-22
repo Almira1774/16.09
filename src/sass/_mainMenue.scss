@@ -46,13 +46,27 @@
     }
 }
 
-.main__text--orientation-1120 {
+.main__text--orientation-1360 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         display: none;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1359px) {
         display: none;
+    }
+}
+
+.main__text--lorem-ipsum {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1359px) {
+        display: none;
+    }
+    @media screen and (min-width: 1360px){
+        display: none;
+        
     }
 }
 
@@ -97,7 +111,23 @@
     width: 24px;
     height: 24px;
 }
-.read-more__text{
+.close{
+    display: none;
+    border-width: 0;
+    width: 140px;
+    height: 24px;
+    background-color: $background-color;
+
+}
+.close__img {
+    background: url("../assets/iconClose.png") center no-repeat;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.read-more__text, 
+.close__text{
     @include fontButtons;
 
 }
