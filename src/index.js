@@ -122,6 +122,21 @@ readMore_close.addEventListener('click', function(){
     
 })
 
+const dialog = function(evt){
+    if(evt.target === this){
+        console.log('Кликнули на backdrop!')
+        this.close()
+    }
+}
+const dialogCall= document.getElementById('callBack')
+dialogCall.addEventListener('click', function(evt){
+    dialog.call(dialogCall, evt);
 
+})
+const dialogFeed= document.getElementById('feedBack')
+dialogFeed.addEventListener('click', function(evt){
+   dialog.call(dialogFeed, evt)
+
+})
 })
 
