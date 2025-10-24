@@ -7,29 +7,48 @@
     justify-content: center;
     @include title-border;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        width: 320px;
+        max-width: 100%;
         min-height: 196px;
         margin-bottom: 24px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 81px;
+            @include slidesGradient;
+            right: 0;
+            top: 95px;
+            opacity: 1;
+            z-index: 2;
+        }
+        
     }
 
     @media screen and ((min-width: 768px) and (max-width: 1359px)) {
         align-content: flex-start;
-        width: 768px;
+       max-width: 100%;
         min-height: 288px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1360px) {
-        width: 1120px;
+    @media screen and (min-width: 1360px) and (max-width:1424px) {
+        min-width: 100%;
         min-height: 288px;
         margin-bottom: 50px;
-        margin-right: 0;
+        margin-left: 260px;
     }
-
+@media screen and (min-width: 1425px) {
+    min-width: 100%;
+    min-height: 288px;
+    margin-bottom: 50px;
+    margin-left: 306px;
+    
+}
 
     .servicesBrands__title {
         width: 100%;
@@ -53,6 +72,7 @@
         @media screen and (min-width:1360px) {
             height: 56px;
             padding: 16px 0 16px 32px;
+            max-width: 100%;
         }
 
     }
@@ -72,13 +92,14 @@
 
         @media screen and ((min-width: 768px) and (max-width: 1359px)) {
             height: 208px;
-            position: relative;
+            margin: 0 auto;
+            max-width: 768px;
         }
 
         @media screen and (min-width:1360px) {
             height: 208px;
-            position: relative;
             align-content: flex-start;
+            margin-right: auto;
         }
 
 
@@ -107,6 +128,8 @@
                 padding: 0 32px;
                 column-gap: 32px;
                 align-content: flex-start;
+                max-width:1120px;
+                
             }
 
         }
@@ -135,17 +158,7 @@
     .swiper-slide-next {
 
         @media screen and ((min-width:320px) and (max-width: 767px)) {
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                width: 24px;
-                height: 81px;
-                background-image: linear-gradient(270deg, $background-color 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-                left: 30px;
-                opacity: 1;
-            }
+           
         }
 
         @media screen and (min-width: 768px) {

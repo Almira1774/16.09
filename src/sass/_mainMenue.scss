@@ -2,9 +2,7 @@
 
 .main {
     display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: row;    
     height: auto;
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -13,22 +11,24 @@
         max-width: 320px;
         padding-left: 16px;
         margin-bottom: 24px;
+        margin-right: auto;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1359px) {
         column-gap: 48px;
         max-width: 768px;
         margin-bottom: 32px;
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
     @media screen and (min-width: 1360px) and (max-width: 1424px){
-        max-width: 1096px;
+        max-width: 100%;
         column-gap: 39.65px;
         padding-left: 35px;
         margin-bottom: 51px;
         margin-left: 260px;
-        margin-right: 0;
     }
     @media screen and (min-width: 1425px) {
         max-width: 1096px;

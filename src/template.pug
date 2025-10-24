@@ -4,7 +4,9 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Первый проект на Webpack 
-    body         
+    body  
+        block modal  
+        include ./pug/modal.pug         
         block modal-feedBack 
         include ./pug/modal-feedBack.pug
         block modal-callBack 
@@ -26,9 +28,7 @@ html(lang="en")
                     button.header-buttons__button.header-buttons__button--status(type="button")            
             div.h1-container
                     div.h1-container__img
-                    h1.h1-container__text Услуги и сервисы 
-        block modal  
-        include ./pug/modal.pug                  
+                    h1.h1-container__text Услуги и сервисы                         
         nav
                     ul.menu
                         li 

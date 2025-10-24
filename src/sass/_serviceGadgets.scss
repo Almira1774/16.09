@@ -7,29 +7,47 @@
     justify-content: center;
     @include title-border;
     background-color: $background-color;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    
 
     @media screen and ((min-width: 320px) and (max-width: 767px)) {
-        width: 320px;
+       max-width: 100%;
         min-height: 284px;
         margin-bottom: 24px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            @include slidesGradient;
+            width: 24px;
+            height: 166px;
+            right: 0;
+            top: 92px;
+            opacity: 1;
+            z-index: 2;
+        }
     }
 
     @media screen and ((min-width: 767px) and (max-width: 1359px)) {
         align-content: flex-start;
-        width: 768px;
+       max-width: 100%;
         min-height: 288px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1360px) {
-        width: 1120px;
+    @media screen and (min-width: 1360px) and (max-width: 1424px) {
+        min-width: 100%;
         min-height: 288px;
         margin-bottom: 50px;
-        margin-right: 0;
+        margin-left: 260px;
     }
-
+    @media screen and (min-width: 1425px) {
+        min-width: 100%;
+        min-height: 288px;
+        margin-bottom: 50px;
+        margin-left: 306px;
+    }
 
     .servicesGadgets__title {
         width: 100%;
@@ -50,9 +68,13 @@
             height: 56px;
         }
 
-        @media screen and (min-width:1360px) {
+        @media screen and (min-width:1360px) and (max-width: 1424px){
             height: 56px;
             padding: 16px 0 16px 32px;
+            min-width: 100%;
+        }
+        @media screen and (min-width : 1425px){
+
         }
     }
 
@@ -69,6 +91,8 @@
 
         @media screen and ((min-width: 768px) and (max-width: 1359px)) {
             height: 208px;
+            max-width: 768px;
+            margin: 0 auto;
         }
 
         @media screen and (min-width:1360px) {
@@ -133,18 +157,7 @@
     .swiper-slide-next {
 
         @media screen and ((min-width:320px) and (max-width: 767px)) {
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-                width: 24px;
-                height: 166px;
-                left: 30px;
-                bottom: 0px;
-                opacity: 1;
-            }
+           
         }
 
     }

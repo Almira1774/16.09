@@ -1,4 +1,4 @@
-$background-color:  #F8F8F8;
+$background-color:  #e4dada;
 $header-color: #FFFFFF;
 $icon-color: #FF3E79;
 $border-color: #D9FFF5;
@@ -42,7 +42,9 @@ $font-white: #FFFFFF;
     text-transform: uppercase;
 }
 
+
 @mixin mainText {
+    
     color: $font-black;
     font-size: 14px;
     font-weight: 400;
@@ -93,4 +95,9 @@ $font-white: #FFFFFF;
     text-transform: uppercase;     
     border: none;
     cursor: pointer;
+}
+
+@mixin slidesGradient{
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
 }

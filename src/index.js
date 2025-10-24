@@ -49,6 +49,11 @@ burgerClose.addEventListener('click',function(){
     overlay.classList.add('overlay--hidden')
 })
 
+overlay.addEventListener('click',function(){
+    back.classList.add('not-visible')
+    overlay.classList.add('overlay--hidden')
+})
+
 window.addEventListener('resize', modalVisibility);
 
 const mainMenue = document.querySelector('.main')
