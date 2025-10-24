@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import '../js/swiper-bundle.min.js'; 
 document.addEventListener("DOMContentLoaded", function () {   
     const gadgetsSwiper = new Swiper(".brands-swiper", {
-        slidesPerView: 1.2,
+        slidesPerView: 'auto',
         slidesPerGroup: 1,
         centeredSlides: false,
         loop: true,
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        
         effect: 'coverflow',
         coverflowEffect: {
             slideShadows: true,

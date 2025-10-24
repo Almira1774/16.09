@@ -27,7 +27,7 @@ const modalVisibility = function(){
         back.classList.remove('not-visible')
     console.log(back.classList)
     }
-    else  if(!isVisible){
+       else  if(isVisible){
         back.classList.add('not-visible')
         console.log(back.classList)
        
