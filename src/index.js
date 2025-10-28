@@ -21,11 +21,24 @@ const overlay = document.querySelector('.overlay');
 
 const body = document.querySelector('body')
 
+const GapChanging = function(){
+    const screen = window.innerWidth
+    const screenHeight = window.innerHeight;
+    const navBlock = back.querySelector('.nav-ul')
+    if(screenHeight <= 655 || screen <=768){
+        navBlock.style.rowGap = '24px' 
+    }
+    else{
+        navBlock.style.rowGap = '32px'  
+    }
+}
 
 const modalVisibility = function(){
     const screen = window.innerWidth;
     const isVisible = !back.classList.contains('not-visible')
     const notHidden = !overlay.classList.contains('overlay--hidden')
+    
+    
     if (screen >=1360){        
         back.classList.remove('not-visible')
     console.log(back.classList)
@@ -39,6 +52,7 @@ const modalVisibility = function(){
         console.log(back.classList)
        
     }
+    GapChanging()
 
 }
 
@@ -47,6 +61,7 @@ burgerShows.addEventListener('click', function(){
     back.classList.remove('not-visible')
     overlay.classList.remove('overlay--hidden')
     body.classList.add('no-scroll')
+    GapChanging()
 
 
 
@@ -64,7 +79,10 @@ overlay.addEventListener('click',function(){
     body.classList.remove('no-scroll')
 })
 
-window.addEventListener('resize', modalVisibility);
+window.addEventListener('resize', function(){
+    modalVisibility()
+    GapChanging()
+});
 
 const mainMenue = document.querySelector('.main-menue')
 const readMore = mainMenue.querySelector('.read-more')
