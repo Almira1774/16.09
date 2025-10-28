@@ -1,6 +1,6 @@
 @use './_variables' as *;
 
-.main {
+.main-menue {
     display: flex;
     flex-direction: row;    
     height: auto;
@@ -40,13 +40,13 @@
     }
 }
 
-.main__text--orientation-768 {
+.main-menue__text--orientation-768 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         display: none;
     }
 }
 
-.main__text--orientation-1360 {
+.main-menue__text--orientation-1360 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         display: none;
     }
@@ -56,7 +56,7 @@
     }
 }
 
-.main__text--lorem-ipsum {
+.main-menue__text--lorem-ipsum {
     @media screen and (min-width: 320px) and (max-width: 767px) {
         display: none;
     }
@@ -70,7 +70,7 @@
     }
 }
 
-.main__text {
+.main-menue__text {
     @include mainText;
     height: auto;
 
@@ -133,7 +133,7 @@
 }
 
 
-.main__logo-container {
+.main-menue__logo-container {
     @media screen and (min-width: 320px) and (max-width:767px) {
         margin-top: 16px;
         max-width: 320px;
@@ -153,6 +153,6 @@
     }
 }
 
-.main__logo {
+.main-menue__logo {
     width: 100%;
 }

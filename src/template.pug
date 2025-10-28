@@ -52,25 +52,25 @@ html(lang="en")
                         li
                             a.menu__button(href="/home")
                                 span.menu__button--reviews Отзывы           
-        section.main
-          div.main__text
+        main.main-menue
+          div.main-menue__text
             p Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
             p
-              span.main__text--orientation-768 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-              span.main__text--orientation-1360 , что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-            p.main__text--lorem-ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              span.main-menue__text--orientation-768 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+              span.main-menue__text--orientation-1360 , что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+            p.main-menue__text--lorem-ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             button.read-more(type="button")   
               div.read-more__img 
               span.read-more__text Читать далее    
             button.close(type="button")   
               div.close__img 
               span.close__text Скрыть      
-            div.main__logo-container 
+            div.main-menue__logo-container 
           picture
             source(media="(min-width:320px) and (max-width: 767px)" srcset="./assets/logo320.png" alt="Логотип и часы работы")
             source(media="(min-width: 768px) and (max-width: 1359px)" srcset="./assets/logo768.png" alt="Логотип и часы работы")
             source(media="(min-width: 1360px)" srcset="./assets/logo1020.png" alt="Логотип и часы работы")
-            img.main__logo(src="./assets/logo320.png" alt="Логотип и часы работы")
+            img.main-menue__logo(src="./assets/logo320.png" alt="Логотип и часы работы")
         block content    
         include ./pug/serviceBrands.pug
         block gadgets

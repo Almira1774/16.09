@@ -19,14 +19,19 @@ const back = document.querySelector('.block');
 const burgerShows = document.querySelector('.header-buttons__button--burger');
 const overlay = document.querySelector('.overlay');
 
+
 const modalVisibility = function(){
     const screen = window.innerWidth;
     const isVisible = !back.classList.contains('not-visible')
-    if (screen >=1360){
-        
+    const notHidden = !overlay.classList.contains('overlay--hidden')
+    if (screen >=1360){        
         back.classList.remove('not-visible')
     console.log(back.classList)
     }
+    if ( notHidden){
+        back.classList.add(isVisible)
+    }
+    
        else  if(isVisible){
         back.classList.add('not-visible')
         console.log(back.classList)
@@ -56,12 +61,12 @@ overlay.addEventListener('click',function(){
 
 window.addEventListener('resize', modalVisibility);
 
-const mainMenue = document.querySelector('.main')
+const mainMenue = document.querySelector('.main-menue')
 const readMore = mainMenue.querySelector('.read-more')
 const readMore_close = mainMenue.querySelector('.close')
-const show768 = mainMenue.querySelector('.main__text--orientation-768')
-const show1360 = mainMenue.querySelector('.main__text--orientation-1360')
-const showLorem = mainMenue.querySelector('.main__text--lorem-ipsum')
+const show768 = mainMenue.querySelector('.main-menue__text--orientation-768')
+const show1360 = mainMenue.querySelector('.main-menue__text--orientation-1360')
+const showLorem = mainMenue.querySelector('.main-menue__text--lorem-ipsum')
 
 
 
