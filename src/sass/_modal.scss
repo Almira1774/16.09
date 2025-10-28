@@ -4,7 +4,7 @@
 
 .block {
     width: 320px;
-    height: 100%;
+
     background-color: $header-color;
     box-shadow: 16px 0px 52px 0 rgba(14, 24, 80, 0.2),
         -2px 0px 4px 0 rgba(69, 79, 126, 0.02);
@@ -24,6 +24,9 @@
 
     @media screen and (min-width: 768px) and (max-width: 1359px) {
         width: 305px;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
     }
 
     @media screen and (min-width: 1360px) and (max-width:1424px) {
@@ -165,7 +168,6 @@
     }
     @media screen and (min-width:768px) and (max-width: 1359px){
         row-gap: 32px;
-        margin-bottom: 241px;
         padding-top: 46.3px;
        
     }
@@ -217,7 +219,7 @@
     margin-top: auto;
 
     @media screen and (min-width: 1360px) {
-        margin-top: auto;
+        
     }
 }
 

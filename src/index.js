@@ -19,6 +19,8 @@ const back = document.querySelector('.block');
 const burgerShows = document.querySelector('.header-buttons__button--burger');
 const overlay = document.querySelector('.overlay');
 
+const body = document.querySelector('body')
+
 
 const modalVisibility = function(){
     const screen = window.innerWidth;
@@ -44,6 +46,7 @@ const modalVisibility = function(){
 burgerShows.addEventListener('click', function(){
     back.classList.remove('not-visible')
     overlay.classList.remove('overlay--hidden')
+    body.classList.add('no-scroll')
 
 
 
@@ -52,11 +55,13 @@ burgerShows.addEventListener('click', function(){
 burgerClose.addEventListener('click',function(){
     back.classList.add('not-visible')
     overlay.classList.add('overlay--hidden')
+    body.classList.remove('no-scroll')
 })
 
 overlay.addEventListener('click',function(){
     back.classList.add('not-visible')
-    overlay.classList.add('overlay--hidden')
+    overlay.classList.add('overlay--hidden')    
+    body.classList.remove('no-scroll')
 })
 
 window.addEventListener('resize', modalVisibility);

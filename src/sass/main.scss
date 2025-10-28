@@ -54,6 +54,10 @@ body {
     }
 }
 
+.no-scroll {
+    overflow: hidden; /* Отключаем прокрутку на body */
+    }
+
 .about-us {
     @include title-border;
     display: flex;
