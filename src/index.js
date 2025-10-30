@@ -35,27 +35,25 @@ const GapChanging = function(){
 
 const modalVisibility = function(){
     const screen = window.innerWidth;
-    const isVisible = !back.classList.contains('not-visible')
     const notHidden = !overlay.classList.contains('overlay--hidden')
     
     
-    if (screen >=1360){        
-        back.classList.remove('not-visible')
-    console.log(back.classList)
-    }
-    if ( notHidden){
-        back.classList.add(isVisible)
+    if (screen >= 1360) {        
+        back.classList.remove('not-visible');
+        back.classList.add('block');
+        overlay.classList.add('overlay-hidden');
+        console.log(back.classList);
+    } else {
+        if (notHidden) {
+            back.classList.remove('not-visible'); 
+            back.classList.add('block');
+        } else {
+            back.classList.add('not-visible'); 
+        }
     }
     
-       else  if(isVisible){
-        back.classList.add('not-visible')
-        console.log(back.classList)
-       
-    }
-    GapChanging()
-
+    GapChanging();
 }
-
 
 burgerShows.addEventListener('click', function(){
     back.classList.remove('not-visible')
