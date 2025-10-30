@@ -32,54 +32,53 @@ const GapChanging = function(){
         navBlock.style.rowGap = '32px'  
     }
 }
+let isModalOpen = false; // Флаг для отслеживания состояния модального окна
 
-const modalVisibility = function(){
+const modalVisibility = function() {
     const screen = window.innerWidth;
-    const notHidden = !overlay.classList.contains('overlay--hidden')
-    
-    
-    if (screen >= 1360) {        
+
+    if (isModalOpen && screen < 1359) {
         back.classList.remove('not-visible');
-        back.classList.add('block');
-        overlay.classList.add('overlay-hidden');
-        console.log(back.classList);
+        overlay.classList.remove('overlay--hidden');
     } else {
-        if (notHidden) {
-            back.classList.remove('not-visible'); 
-            back.classList.add('block');
+        // Логика для скрытия модального окна при ресайзе
+        if (screen >= 1360) {
+            back.classList.remove('not-visible');
+            overlay.classList.add('overlay--hidden');
         } else {
-            back.classList.add('not-visible'); 
+            back.classList.add('not-visible');
+            overlay.classList.add('overlay--hidden');
         }
     }
-    
+
     GapChanging();
 }
 
-burgerShows.addEventListener('click', function(){
-    back.classList.remove('not-visible')
-    overlay.classList.remove('overlay--hidden')
-    body.classList.add('no-scroll')
-    GapChanging()
-
-
-
+burgerShows.addEventListener('click', function() {
+    back.classList.remove('not-visible');
+    overlay.classList.remove('overlay--hidden');
+    body.classList.add('no-scroll');
+    isModalOpen = true; 
+    GapChanging();
 });
 
-burgerClose.addEventListener('click',function(){
-    back.classList.add('not-visible')
-    overlay.classList.add('overlay--hidden')
-    body.classList.remove('no-scroll')
-})
+burgerClose.addEventListener('click', function() {
+    back.classList.add('not-visible');
+    overlay.classList.add('overlay--hidden');
+    body.classList.remove('no-scroll');
+    isModalOpen = false; 
+});
 
-overlay.addEventListener('click',function(){
-    back.classList.add('not-visible')
-    overlay.classList.add('overlay--hidden')    
-    body.classList.remove('no-scroll')
-})
+overlay.addEventListener('click', function() {
+    back.classList.add('not-visible');
+    overlay.classList.add('overlay--hidden');
+    body.classList.remove('no-scroll');
+    isModalOpen = false; 
+});
 
-window.addEventListener('resize', function(){
-    modalVisibility()
-    GapChanging()
+window.addEventListener('resize', function() {
+    modalVisibility();
+    GapChanging();
 });
 
 const mainMenue = document.querySelector('.main-menue')
